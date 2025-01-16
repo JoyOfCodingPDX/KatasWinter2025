@@ -16,6 +16,13 @@ public class Kata {
   }
 
     public String fizzBuzz(int i) {
+      if (i % 5 == 0) {
+        return "Buzz";
+
+      } else if (i % 3 == 0) {
+        return "Fizz";
+      }
+
       return String.valueOf(i);
     }
 }
