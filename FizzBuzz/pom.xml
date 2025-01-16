@@ -75,7 +75,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pairs.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.pairs.FizzBuzz</mainClass>
             </manifest>
           </archive>
         </configuration>
