@@ -19,6 +19,51 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <id>student1</id>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>student2</id>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>student3</id>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>student4</id>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>student5</id>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>student6</id>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
