@@ -29,16 +29,16 @@
     </developer>
     <developer>
       <id>student2</id>
-      <name>Student Name</name>
+      <name>Greg Witt</name>
       <roles>
-        <role>Driver or Navigator</role>
+        <role>Navigator</role>
       </roles>
     </developer>
     <developer>
       <id>student3</id>
-      <name>Student Name</name>
+      <name>Nathan Metens</name>
       <roles>
-        <role>Driver or Navigator</role>
+        <role>Driver</role>
       </roles>
     </developer>
     <developer>
