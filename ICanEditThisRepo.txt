@@ -9,7 +9,7 @@ latest changes.  In fact, you may need to do this several times.
 
 If you are not able to push to this repository, please DM your GitHub user id
 (mine is "DavidWhitlock") to Dave in Slack.
-
+  
 
 
 ### Replace your initials with HERE
@@ -17,15 +17,15 @@ If you are not able to push to this repository, please DM your GitHub user id
 ABA
 HMB
 ASB
-GCC
 HERE
+BSC
 VC
 DHG
 LT
 DHM
-NPM
+HERE
 SGM
-JRP
+HERE
 VEP
 MWR
 TDT
@@ -35,18 +35,18 @@ WYZ
 SAA
 VTB
 LPB
-DCC
+HERE
 AAH
 HERE
 JH
 CDI
 MK
-FNL
+Farani Nicholas Lucero
 NEM
 TAP
 JAS
 NST
-GAW
+HERE
 
 
 HERE
