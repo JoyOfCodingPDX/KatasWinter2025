@@ -11,8 +11,8 @@ accordingly
     <groupId>io.github.davidwhitlock.joy</groupId>
     <version>1.2.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.YourUserId</groupId>
-  <artifactId>JoyOfCoding</artifactId>
+  <groupId>edu.pdx.cs.joy.katas</groupId>
+  <artifactId>KatasWinter2025</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>JoyOfCodingWinter2025</name>
