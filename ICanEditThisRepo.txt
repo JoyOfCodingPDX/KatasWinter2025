@@ -29,7 +29,7 @@ HERE
 VEP
 HERE
 TDT
-WT
+HERE
 WYZ
 
 SAA
@@ -42,7 +42,7 @@ JH
 CDI
 MK
 Farani Nicholas Lucero
-NEM
+NEM -> Nathan Metens
 TAP
 HERE
 NST
