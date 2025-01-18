@@ -6,20 +6,20 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class KataTest
+public class FizzBuzzTest
 {
 
-  private Kata kata;
+  private FizzBuzz kata;
 
   @BeforeEach
   void setUp() {
-    kata = new Kata();
+    kata = new FizzBuzz();
   }
   
 
   @Test
   void canInstantiateKataClass() {
-    new Kata();
+    new FizzBuzz();
   }
 
 

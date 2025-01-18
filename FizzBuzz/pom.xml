@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>joy</artifactId>
-    <groupId>io.github.davidwhitlock.joy</groupId>
-    <version>1.2.0</version>
+    <groupId>edu.pdx.cs.joy.katas</groupId>
+    <artifactId>KatasWinter2025</artifactId>
+    <version>1.0.0</version>
   </parent>
   <groupId>edu.pdx.cs.joy.pairs</groupId>
   <artifactId>FizzBuzz</artifactId>
@@ -17,8 +17,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
   </properties>
 
   <developers>
@@ -75,7 +73,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pairs.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.pairs.FizzBuzz</mainClass>
             </manifest>
           </archive>
         </configuration>
