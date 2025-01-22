@@ -1,4 +1,4 @@
-package edu.pdx.cs.joy.Pair1;
+package edu.pdx.cs.joy.pair1;
 
 import com.google.common.annotations.VisibleForTesting;
 
@@ -8,7 +8,7 @@ import com.google.common.annotations.VisibleForTesting;
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
-public class Kata {
+public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {

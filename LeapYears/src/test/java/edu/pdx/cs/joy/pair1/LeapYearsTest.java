@@ -1,13 +1,13 @@
-package edu.pdx.cs.joy.Pair1;
+package edu.pdx.cs.joy.pair1;
 
 import org.junit.jupiter.api.Test;
 
-public class KataTest
+public class LeapYearsTest
 {
 
   @Test
   void canInstantiateKataClass() {
-    new Kata();
+    new LeapYears();
   }
 
 }
