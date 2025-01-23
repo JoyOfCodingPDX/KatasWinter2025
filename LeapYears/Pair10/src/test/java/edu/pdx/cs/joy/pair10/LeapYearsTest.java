@@ -28,4 +28,14 @@ public class LeapYearsTest
     assertFalse(LeapYears.isLeapYear(100));
   }
 
+  @Test
+  void year2000Leaps(){
+    assertTrue(LeapYears.isLeapYear(2000));
+  }
+
+  @Test
+  void year2007DoesNotLeap(){
+    assertFalse(LeapYears.isLeapYear(2007));
+  }
+
 }
