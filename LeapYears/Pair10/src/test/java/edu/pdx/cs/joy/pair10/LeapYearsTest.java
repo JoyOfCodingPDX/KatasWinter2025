@@ -10,4 +10,9 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  @Test
+  void year3doesnotleap() {
+    assertFalse(LeapYears.isLeapYear(3));
+  }
+
 }
