@@ -14,4 +14,12 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  boolean checkYear(int year) {
+    if (year % 4 == 0) {
+      return true;
+    }
+    return false;
+  }
+
 }

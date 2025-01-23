@@ -22,7 +22,7 @@ public class LeapYearsTest
 
   @Test
   void isLeapYear(){
-    LeapYears isLeapYear = new LeapYears(2000);
+    LeapYears isLeapYear = new LeapYears(2008);
     assertEquals(isLeapYear.isLeapYear(), true);
   }
 
