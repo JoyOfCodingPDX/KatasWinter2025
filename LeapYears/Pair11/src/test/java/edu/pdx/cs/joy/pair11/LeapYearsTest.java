@@ -62,6 +62,7 @@ public class LeapYearsTest
       LeapYears leapyear = new LeapYears(years[i]);
 
       assertThat(leapyear.year %4,equalTo(answers[i]));
-  }
+    }
 
+  }
 }
