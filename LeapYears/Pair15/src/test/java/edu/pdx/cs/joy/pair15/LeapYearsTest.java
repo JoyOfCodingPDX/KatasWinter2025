@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LeapYearsTest
 {
 
-  LeapYears testLeap = new LeapYears(2008);
+  LeapYears testLeap = new LeapYears(2000);
 
   @Test
   void canInstantiateKataClass() {
@@ -18,7 +18,7 @@ public class LeapYearsTest
   @Test
   void testGetYear(){
     int result = testLeap.returnYear();
-    assertEquals(result, 2008);
+    assertEquals(result, 2000);
   }
 
   @Test
