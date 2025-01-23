@@ -13,7 +13,13 @@ public class IsLeapYears {
   @VisibleForTesting
   public boolean isLeapYear(int year){
     boolean check_leap = year % 400 == 0;
-      return check_leap;
+    if(check_leap==false){
+      check_leap= year % 100!= 0 ;
+      if(check_leap==false){
+        check_leap= year % 4 == 0 ;
+      }
+    }
+    return check_leap;
   }
 
   @VisibleForTesting

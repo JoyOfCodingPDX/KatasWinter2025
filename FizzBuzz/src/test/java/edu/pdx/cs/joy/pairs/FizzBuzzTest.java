@@ -22,7 +22,6 @@ public class FizzBuzzTest
     new FizzBuzz();
   }
 
-
   @Test
   void fiveBuzzes() {
       assertFizzBuzz(5, "Buzz");

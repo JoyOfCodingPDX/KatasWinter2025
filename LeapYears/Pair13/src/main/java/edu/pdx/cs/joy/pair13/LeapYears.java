@@ -16,15 +16,15 @@ public class LeapYears {
     // expected command line execution is "./LeapYears 1957"
 
     // user enters in year place in User_year variable
-    Integer user_year = args[0];
+    int user_year = Integer.pasrseInt(args[0]);
 
     // Call test function and get return value
     // Integer valid = LeapYearsTest(user_year)
     // if return == 1
-    if valid =
     //      OutPut MSG: "Yes the year entered is a leap year"
-    System.out.print
+    // System.out.print("Yes the year entered is a leap year")
     // else
     //      OutPut MSG: "No the year entered is not a leap year"
+    // System.out.print("No the year entered is not a leap year")
   }
 }
