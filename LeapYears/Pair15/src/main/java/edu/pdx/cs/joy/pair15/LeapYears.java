@@ -30,9 +30,10 @@ public class LeapYears {
       return true;
     } else if ( current % 100 == 0 && current % 400 != 0 ) {
       return false;
-    } else {
-      return false;
+    } else if(current % 4 == 0 && current % 100 != 0){
+      return true;
     }
+    return false;
   }
 
 }
