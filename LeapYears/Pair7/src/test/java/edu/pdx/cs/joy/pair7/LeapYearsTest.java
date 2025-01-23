@@ -39,10 +39,23 @@ public class LeapYearsTest
     assertThat(leapYears.isLeapYear(2012), equalTo(true));
   }
 
-   @Test
+  @Test
   void notDivBy4IsNotLeapYear() {
     LeapYears leapYears = new LeapYears();
     assertThat(leapYears.isLeapYear(2019), equalTo(false));
   }
+
+  @Test
+  void check2024isLeapYear() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.isLeapYear(2024), equalTo(true));
+  }
+
+    @Test
+  void check2020isLeapYear() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.isLeapYear(2020), equalTo(true));
+  }
+
 
 }
