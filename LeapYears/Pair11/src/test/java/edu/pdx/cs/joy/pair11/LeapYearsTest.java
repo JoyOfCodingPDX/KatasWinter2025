@@ -48,7 +48,7 @@ public class LeapYearsTest
   }
 
   @Test
-  void all YearsNotDivby4NotLeapYear(){
+  void allYearsNotDivby4NotLeapYear(){
     int[] years = {2017,2018,2019};
     int[] answers = {1,2,3};
 
