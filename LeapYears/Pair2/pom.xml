@@ -19,6 +19,17 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <id>kumari</id>
+      <name>Manisha Kumari</name>
+    </developer>
+    <developer>
+      <id>student2</id>
+      <name>Your Name</name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>

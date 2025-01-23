@@ -19,7 +19,7 @@ HMB
 HERE
 HERE
 HERE
-VC
+HERE
 DHG
 LT
 HERE
@@ -28,7 +28,7 @@ HERE
 HERE
 HERE
 HERE
-TDT
+HERE
 HERE
 HERE
 
@@ -58,7 +58,7 @@ HERE
 ### Didn't find your initials?  No problem.  Replace one of these instead.
 
 AAB HERE // Ahmed Al-Badri
-BBB
+HERE //Teresa LaBolle
 CCC
 DDD
 EEE

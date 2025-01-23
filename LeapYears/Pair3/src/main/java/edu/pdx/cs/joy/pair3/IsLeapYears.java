@@ -8,7 +8,21 @@ import com.google.common.annotations.VisibleForTesting;
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
-public class LeapYears {
+public class IsLeapYears {
+
+  @VisibleForTesting
+  public boolean isLeapYear(int year){
+    boolean check_leap = year % 400 == 0;
+    if(check_leap==false){
+      check_leap= year % 100 == 0 ;
+      if(check_leap==false){
+        check_leap= year % 4 == 0 ;
+      } else {
+        check_leap = false;
+      }
+    }
+    return check_leap;
+  }
 
   @VisibleForTesting
   public static void main(String[] args) {
