@@ -9,9 +9,23 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class LeapYears {
+  int year;
 
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public LeapYears(int year){
+    this.year=year;
+  }
+
+  public int returnYear(){
+    return this.year;
+  }
+
+  public boolean isLeapYear(){
+    return false;
+  }
+
 }

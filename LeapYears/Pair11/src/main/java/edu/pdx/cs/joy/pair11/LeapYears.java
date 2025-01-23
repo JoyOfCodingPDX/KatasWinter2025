@@ -10,6 +10,12 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
+    private int year;
+
+    public LeapYears (int year) {
+        this.year = year; 
+    }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
