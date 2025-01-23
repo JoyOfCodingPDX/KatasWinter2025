@@ -9,24 +9,24 @@ public class LeapYearsTest
 
   @Test
   void canInstantiateKataClass() {
-    new LeapYears();
+    LeapYears leapYears = new LeapYears();
   }
   @Test
   void testYearDivisibleByFour(){
-    LeapYears testLeap = new LeapYears(64);
-    boolean result = testLeap.yearDivisibleByFour();
+    LeapYears testLeap = new LeapYears();
+    boolean result = testLeap.yearDivisibleByFour(400);
     assertEquals(result, true);
   }
   @Test
   void testYearDivisibleByFourHundred(){
-    LeapYears testLeap = new LeapYears(400);
-    boolean result = testLeap.yearDivisibleByFourHundred();
+    LeapYears testLeap = new LeapYears();
+    boolean result = testLeap.yearDivisibleByFourHundred(300);
     assertEquals(result, true);
   }
   @Test
   void testYearDivisibleByHundred(){
-    LeapYears testLeap = new LeapYears(400);
-    boolean result = testLeap.yearDivisibleByHundred();
+    LeapYears testLeap = new LeapYears();
+    boolean result = testLeap.yearDivisibleByHundred(200);
     assertEquals(result, true);
   }
 
