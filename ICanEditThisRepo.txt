@@ -30,7 +30,7 @@ HERE
 HERE
 TDT
 HERE
-WYZ
+HERE
 
 SAA
 VTB
@@ -46,7 +46,7 @@ MK
 MK
 Farani Nicholas Lucero
 NEM -> Nathan Metens
-TAP
+HERE
 HERE
 HERE
 
