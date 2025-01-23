@@ -12,7 +12,13 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class LeapYearsTest
 {
-
+/*
+  @BeforeEach
+  void SetUp(){
+    int[] years = {};
+    
+  }
+*/
   @Test
   void canInstantiateKataClass() {
     new LeapYears(100);
