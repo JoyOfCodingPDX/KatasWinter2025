@@ -18,11 +18,11 @@
   <developers>
     <developer>
       <id>student1</id>
-      <name>Your Name</name>
+      <name>Ahmed Al-Badri</name>
     </developer>
     <developer>
       <id>student2</id>
-      <name>Your Name</name>
+      <name>Tahniat</name>
     </developer>
   </developers>
 
@@ -39,7 +39,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair3.LeapYears</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair3.IsLeapYears</mainClass>
             </manifest>
           </archive>
         </configuration>
