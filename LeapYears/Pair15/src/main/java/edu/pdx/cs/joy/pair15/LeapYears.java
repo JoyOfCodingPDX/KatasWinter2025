@@ -25,7 +25,13 @@ public class LeapYears {
   }
 
   public boolean isLeapYear(){
-    return false;
+    int current = this.year;
+    if ( current  % 400 == 0 || current % 4 ==0 ){
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
 }
