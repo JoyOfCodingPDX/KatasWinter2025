@@ -15,5 +15,16 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
-  public static boolean isDivByFourHundred(int year) {return false;};
+  public static boolean isDivByFourHundred(int year){
+    return (year % 400 == 0);
+  }
+
+  public static boolean isDivByOneHundred(int year){
+    return (year % 100 == 0);
+  }
+
+  public static boolean isDivByFour(int year){
+    return (year % 4 == 0);
+  }
+
 }
