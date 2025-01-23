@@ -31,4 +31,32 @@ public class LeapYearsTest
     int isLeapYear = 800;
     assertTrue(LeapYears.isDivByFourHundred(isLeapYear));
   }
+
+  @Test
+  void invalidYearDivByOneHundredFails(){
+    new LeapYears();
+    int isNotLeapYear = 999;
+    assertFalse(LeapYears.isDivByOneHundred(isNotLeapYear));
+  }
+
+  @Test
+  void validYearDivByOneHundredFails(){
+    new LeapYears();
+    int isLeapYear = 800;
+    assertTrue(LeapYears.isDivByOneHundred(isLeapYear));
+  }
+
+  @Test
+  void invalidYearDivByFourFails(){
+    new LeapYears();
+    int isNotLeapYear = 999;
+    assertFalse(LeapYears.isDivByOneHundred(isNotLeapYear));
+  }
+
+  @Test
+  void validYearDivByFourFails(){
+    new LeapYears();
+    int isLeapYear = 800;
+    assertTrue(LeapYears.isDivByOneHundred(isLeapYear));
+  }
 }
