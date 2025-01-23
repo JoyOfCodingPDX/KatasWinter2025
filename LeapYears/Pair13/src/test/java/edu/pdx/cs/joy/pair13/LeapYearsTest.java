@@ -24,5 +24,4 @@ public class LeapYearsTest
     //if(year % 4 == 0){
 
     }
-  }
 }
