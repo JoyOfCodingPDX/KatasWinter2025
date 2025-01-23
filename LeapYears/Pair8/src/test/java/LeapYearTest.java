@@ -11,6 +11,12 @@ public class LeapYearTest {
     }
 
     void yearsDivisibleBy4AndNot100Are(int year) {
-        assertTrue(year % 400 == 0);
+        assertTrue(year % 4 == 0 && year % 100 != 0);
     }
+
+    void yearsDivisibleBy4AreNot(int year) {
+        assertFalse(year % 4 == 0);
+    }
+
+
 }
