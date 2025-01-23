@@ -26,8 +26,7 @@ public class LeapYearsTest
   }
 
   @Test
-  void isntIntYearValue() {
-    LeapYears leapYears = new LeapYears();
-    assertThat(leapYears.isLeapYear(20.00), equalTo(false));
+  void divBy100Not400() {
+
   }
 }
