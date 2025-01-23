@@ -14,7 +14,7 @@ public class IsLeapYears {
   public boolean isLeapYear(int year){
     boolean check_leap = year % 400 == 0;
     if(check_leap==false){
-      check_leap= year % 100!= 0 ;
+      check_leap= year % 100 != 0 ;
       if(check_leap==false){
         check_leap= year % 4 == 0 ;
       }
