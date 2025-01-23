@@ -10,7 +10,7 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
-    private int year;
+    public int year;
 
     public LeapYears (int year) {
         this.year = year; 

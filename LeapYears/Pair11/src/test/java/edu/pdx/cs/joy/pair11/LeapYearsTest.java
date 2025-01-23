@@ -10,14 +10,22 @@ public class LeapYearsTest
 
   @Test
   void canInstantiateKataClass() {
-    new LeapYears();
+    new LeapYears(100);
   }
 
   @Test
   void checkIfYearsDivisibleBy400AreLeapYears() {
-    int year = 5000;
+    int year = 4000;
     LeapYears leapyear = new LeapYears(year);
     assertThat(leapyear.year %400, equalTo(0));
-    
+  }
+
+  @Test
+  void allYearsDivby100Not400Are() {
+    int year = 100;
+    LeapYears leapyear = new LeapYears(year);
+    assertThat(leapyear.year % 100, equalTo(0));
+    assertThat(leapyear.year % 400, notEqualTo(0));
+
   }
 }
