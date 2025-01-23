@@ -24,5 +24,18 @@ public class LeapYearsTest
 
   }
 
+  @Test
+  void testAllYearsDivisibleBy4() {
+    LeapYears lp = new LeapYears();
 
+    int year = 2004;
+    assertTrue(lp.checkYear(year));
+  }
+
+  @Test
+  void testAllYearsNotDivisibleBy100() {
+    LeapYears lp = new LeapYears();
+    int year = 2001;
+    assertFalse(lp.checkYear(year));
+  }
 }
