@@ -12,9 +12,19 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    public boolean leapYears(String[] args) {
-      return ()
+    for (String arg : args) {
+      int year = Integer.parseInt(arg);
+      if (leapYears(year)) {
+        System.out.println(year + " is a leap year");
+      }
+      else {
+        System.out.println(year + " is not a leap year");
+      }
     }
     System.err.println("Missing command line arguments");
+  }
+
+  public static boolean leapYears( int year) {
+    return (year % 400 == 0 || year % 4 == 0 && year % 100 != 0);
   }
 }
