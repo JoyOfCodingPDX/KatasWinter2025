@@ -11,8 +11,8 @@
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Kata Project</name>
-  <description>A simple project for getting started with code Diamonds</description>
+  <name>Diamond Pair 1</name>
+  <description>Diamond Kata</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
