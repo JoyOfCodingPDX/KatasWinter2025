@@ -16,9 +16,7 @@ public class LeapYearsTest
 
   @Test
   void testAllYearsNotDivisibleBy4() {
-
     LeapYears lp = new LeapYears();
-
     int year = 2005;
     assertFalse(lp.checkYear(year));
 
@@ -27,7 +25,6 @@ public class LeapYearsTest
   @Test
   void testAllYearsDivisibleBy4() {
     LeapYears lp = new LeapYears();
-
     int year = 2004;
     assertTrue(lp.checkYear(year));
   }
@@ -38,4 +35,26 @@ public class LeapYearsTest
     int year = 2001;
     assertFalse(lp.checkYear(year));
   }
+
+  @Test
+  void testAllYearsDivisibleBy4_2() {
+    LeapYears lp = new LeapYears();
+    int year = 2008;
+    assertTrue(lp.checkYear(year));
+  }
+
+  @Test
+  void testAllYearsDivisibleBy4and100() {
+    LeapYears lp = new LeapYears();
+    int year = 4000;
+    assertFalse(lp.checkYear(year));
+  }
+
+  @Test
+  void testAllYearsDivisibleBy100Not400() {
+    LeapYears lp = new LeapYears();
+    int year = 3000;
+    assertFalse(lp.checkYear(year));
+  }
+
 }

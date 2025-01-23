@@ -27,5 +27,11 @@ public class IsLeapYearsTest
     IsLeapYears check = new IsLeapYears();
     assert(false == check.isLeapYear(2100));
   }
-  
+
+    @Test
+    void isLeapYearBy4(){
+      IsLeapYears check = new IsLeapYears();
+      assert(true == check.isLeapYear(2044));
+    }
+
 }
