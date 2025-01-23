@@ -20,13 +20,17 @@ public class LeapYearTest {
     }
 
     @Test
-    void yearsDivisibleBy4AndNot100Are(int year) {
-        assertTrue(year % 4 == 0 && year % 100 != 0);
+    void yearsDivisibleBy4AndNot100Are() {
+        assertTrue(leapYears(2008));
+        assertTrue(leapYears(2012));
+        assertTrue(leapYears(2016));
     }
 
     @Test
-    void yearsDivisibleBy4AreNot(int year) {
-        assertFalse(year % 4 == 0);
+    void yearsDivisibleBy4AreNot() {
+        assertFalse(leapYears(2017));
+        assertFalse(leapYears(2018));
+        assertFalse(leapYears(2019));
     }
 
 

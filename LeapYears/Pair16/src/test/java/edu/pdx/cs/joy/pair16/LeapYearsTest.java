@@ -26,7 +26,7 @@ public class LeapYearsTest
   }
 
   @Test
-  void validYearDivByFourHundredFails(){
+  void validYearDivByFourHundredSucceeds(){
     new LeapYears();
     int isLeapYear = 800;
     assertTrue(LeapYears.isDivByFourHundred(isLeapYear));
@@ -40,7 +40,7 @@ public class LeapYearsTest
   }
 
   @Test
-  void validYearDivByOneHundredFails(){
+  void validYearDivByOneHundredSucceeds(){
     new LeapYears();
     int isLeapYear = 800;
     assertTrue(LeapYears.isDivByOneHundred(isLeapYear));
@@ -54,9 +54,23 @@ public class LeapYearsTest
   }
 
   @Test
-  void validYearDivByFourFails(){
+  void validYearDivByFourSucceeds(){
     new LeapYears();
     int isLeapYear = 800;
     assertTrue(LeapYears.isDivByOneHundred(isLeapYear));
+  }
+
+  @Test
+  void determineLeapYearSuccess(){
+    new LeapYears();
+    int isLeapYear = 2008;
+    assertTrue(LeapYears.determineLeapYear(isLeapYear));
+  }
+
+  @Test
+  void determineInvalidYearFails(){
+    new LeapYears();
+    int isLeapYear = 2007;
+    assertFalse(LeapYears.determineLeapYear(isLeapYear));
   }
 }
