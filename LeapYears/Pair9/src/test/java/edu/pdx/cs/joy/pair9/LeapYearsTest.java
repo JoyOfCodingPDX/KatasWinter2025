@@ -57,4 +57,10 @@ public class LeapYearsTest
     assertEquals(isLeap, true);
   }
 
+  @Test
+  void testIsLeapYearForYearDivisibleByFourAndHundredButNotFourHundred(){
+    LeapYears testLeap = new LeapYears();
+    boolean isLeap = testLeap.isLeapYear(1900);
+    assertEquals(isLeap, false);
+  }
 }
