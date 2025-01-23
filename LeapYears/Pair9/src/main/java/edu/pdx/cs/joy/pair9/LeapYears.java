@@ -26,4 +26,15 @@ public class LeapYears {
   public boolean yearDivisibleByHundred(int year){
     return year%100==0;
   }
+  public boolean isLeapYear(int year){
+    if(year<0)return false;
+    if (yearDivisibleByFourHundred(year)) {
+      return true;
+    } else if (yearDivisibleByHundred(year)) {
+      return false;
+    } else if (yearDivisibleByFour(year)) {
+      return true;
+    }
+    return false;
+  }
 }

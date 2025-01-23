@@ -28,10 +28,12 @@ public class LeapYears {
     int current = this.year;
     if ( current  % 400 == 0 || current % 4 ==0 ){
       return true;
-    }
-    else {
+    } else if ( current % 100 == 0 && current % 400 != 0 ) {
       return false;
+    } else if(current % 4 == 0 && current % 100 != 0){
+      return true;
     }
+    return false;
   }
 
 }
