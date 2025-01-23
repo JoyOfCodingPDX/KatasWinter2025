@@ -18,7 +18,10 @@ public class LeapYears {
   boolean checkYear(int year) {
     if (year % 4 == 0) {
       if (year % 100 == 0) {
-        return false; // leap year atest 3
+        if (year % 400 == 0) {
+          return true;
+        }
+        return false; // leap year atest 4
       }
       return true; // leap year test 3
     }
