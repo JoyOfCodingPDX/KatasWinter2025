@@ -13,5 +13,6 @@
   <description>The Diamond Katas</description>
   <modules>
     <module>Pair1</module>
+    <module>Pair2</module>
   </modules>
 </project>
