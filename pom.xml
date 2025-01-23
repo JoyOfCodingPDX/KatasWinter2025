@@ -15,11 +15,12 @@ accordingly
   <artifactId>KatasWinter2025</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>JoyOfCodingWinter2025</name>
-  <description>Source code written in the Summer 2025 offering of The Joy of Coding</description>
-  <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingWinter2025</url>
+  <name>KatasWinter2025</name>
+  <description>Code Katas done in the Winter 2025 offering of The Joy of Coding</description>
+  <url>https://github.com/JoyOfCodingPDX/KatasWinter2025</url>
   <modules>
     <module>FizzBuzz</module>
+    <module>LeapYears</module>
   </modules>
   <inceptionYear>2025</inceptionYear>
   <organization>
