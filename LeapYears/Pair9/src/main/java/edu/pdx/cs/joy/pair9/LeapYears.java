@@ -10,25 +10,20 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
-  int year;
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
 
-  public LeapYears(int year){
-    this.year=year;
-  }
-
-  public boolean yearDivisibleByFour(){
+  public boolean yearDivisibleByFour(int year){
     return year%4==0;
   }
 
-  public boolean yearDivisibleByFourHundred(){
+  public boolean yearDivisibleByFourHundred(int year){
     return year%400==0;
   }
 
-  public boolean yearDivisibleByHundred(){
+  public boolean yearDivisibleByHundred(int year){
     return year%100==0;
   }
 }
