@@ -9,5 +9,5 @@ public class LeapYearsTest
   void canInstantiateKataClass() {
     new LeapYears();
   }
-
+  
 }
