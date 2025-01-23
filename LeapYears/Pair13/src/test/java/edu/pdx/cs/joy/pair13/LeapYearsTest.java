@@ -20,8 +20,8 @@ public class LeapYearsTest
     // All years not divisible by 4 are NOT leap years (e.g. 2017, 2018, 2019).
 
     // if passes tests returns true or 1
-    int year  = 0;
-    if(year % 4 == 0){
+    //int year  = 0;
+    //if(year % 4 == 0){
 
     }
   }

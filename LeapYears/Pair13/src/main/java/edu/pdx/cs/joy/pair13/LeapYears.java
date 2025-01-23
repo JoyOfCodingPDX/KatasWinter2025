@@ -13,7 +13,6 @@ public class LeapYears {
     if (value % 4 == 0 ){
       System.out.print("is a leap year");
     }
-
   }
   @VisibleForTesting
   // int = 0000 = 0    String = 0000  int = 0986 = 986

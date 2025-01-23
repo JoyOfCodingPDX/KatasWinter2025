@@ -2,6 +2,9 @@ package edu.pdx.cs.joy.pair8;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * A class for getting started with a code kata
  *
@@ -12,6 +15,8 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
+    //  BufferedReader r = new BufferedReader();
+      //new InputStreamReader(System.in);
     for (String arg : args) {
       int year = Integer.parseInt(arg);
       if (leapYears(year)) {

@@ -46,6 +46,7 @@ public class LeapYearsTest
   }
 
   @Test
+<<<<<<< HEAD
   void check2024isLeapYear() {
     LeapYears leapYears = new LeapYears();
     assertThat(leapYears.isLeapYear(2024), equalTo(true));
@@ -58,4 +59,17 @@ public class LeapYearsTest
   }
 
 
+=======
+  void hundredIsLeapYear() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.isLeapYear(100), equalTo(true));
+  }
+
+  @Test
+  void fourIsLeapYear() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.isLeapYear(4), equalTo(true));
+  }
+
+>>>>>>> 37b64c47376ee518641619fa59541a2360954f43
 }
