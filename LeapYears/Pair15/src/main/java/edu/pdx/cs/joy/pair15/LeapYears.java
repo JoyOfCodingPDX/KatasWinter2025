@@ -20,6 +20,12 @@ public class LeapYears {
     this.year=year;
   }
 
-  
+  public int returnYear(){
+    return this.year;
+  }
+
+  public boolean isLeapYear(){
+    return false;
+  }
 
 }
