@@ -15,6 +15,17 @@
   <description>A simple project for getting started with code LeapYears</description>
   <url>http://www.cs.pdx.edu</url>
 
+  <developers>
+    <developer>
+      <id>student1</id>
+      <name>Your Name</name>
+    </developer>
+    <developer>
+      <id>student2</id>
+      <name>Your Name</name>
+    </developer>
+  </developers>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
