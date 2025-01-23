@@ -17,11 +17,14 @@ public class LeapYears {
 
   public static boolean isDivByFourHundred(int year){
     return (year % 400 == 0);
-  };
-
-  public static boolean isDivByOneHundred(int year){
-    return (year % 400 == 0);
   }
 
+  public static boolean isDivByOneHundred(int year){
+    return (year % 100 == 0);
+  }
+
+  public static boolean isDivByFour(int year){
+    return (year % 4 == 0);
+  }
 
 }
