@@ -47,4 +47,15 @@ public class LeapYearsTest
     }
   }
 
+  @Test
+  void all YearsNotDivby4NotLeapYear(){
+    int[] years = {2017,2018,2019};
+    int[] answers = {1,2,3};
+
+    for (int i=0; i<years.length;i++){
+      LeapYears leapyear = new LeapYears(years[i]);
+
+      assertThat(leapyear.year %4,equalTo(answers[i]));
+  }
+
 }
