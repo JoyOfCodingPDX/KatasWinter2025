@@ -30,7 +30,7 @@ HERE
 HERE
 HERE
 HERE
-WYZ
+HERE
 
 SAA
 VTB
@@ -46,7 +46,7 @@ MK
 MK
 Farani Nicholas Lucero
 NEM -> Nathan Metens
-TAP
+HERE
 HERE
 HERE
 
@@ -58,7 +58,7 @@ HERE
 ### Didn't find your initials?  No problem.  Replace one of these instead.
 
 AAB HERE // Ahmed Al-Badri
-BBB
+HERE //Teresa LaBolle
 CCC
 DDD
 EEE
