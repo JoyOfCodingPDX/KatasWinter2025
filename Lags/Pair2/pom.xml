@@ -6,12 +6,12 @@
     <artifactId>LagsKatas</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.pair1</groupId>
+  <groupId>edu.pdx.cs.joy.pair2</groupId>
   <artifactId>Lags</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Lags Pair 1</name>
+  <name>Lags Pair 2</name>
   <description>Lags Kata</description>
   <url>http://www.cs.pdx.edu</url>
 
@@ -39,7 +39,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair1.Lags</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair2.Lags</mainClass>
             </manifest>
           </archive>
         </configuration>
