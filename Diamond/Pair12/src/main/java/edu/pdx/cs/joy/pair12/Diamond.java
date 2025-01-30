@@ -11,8 +11,13 @@ import com.google.common.annotations.VisibleForTesting;
 public class Diamond {
 
   static void printDiamond(char letter) {
-    for (char start = 'A'; start < letter; ) {
 
+    StringBuilder diamondString = new StringBuilder();
+
+    int whiteSpace = letter - 'A';
+
+    for (char start = 'A'; start <= letter; start++ ) {
+        diamondString()
     }
   }
 
