@@ -22,18 +22,11 @@
   <developers>
     <developer>
       <id>student1</id>
-
       <name>Greg Witt</name>
     </developer>
     <developer>
       <id>student2</id>
-      <name></name>
-      <name>First Last</name>
-    </developer>
-    <developer>
-      <id>student2</id>
       <name>Gustavo Carrillo Castro</name>
->>>>>>> 2ae63c9a0c280a82189a722a3683a23a0b38f903
     </developer>
   </developers>
 
