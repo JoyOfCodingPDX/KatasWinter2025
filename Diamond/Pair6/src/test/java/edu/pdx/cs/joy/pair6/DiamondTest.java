@@ -6,6 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class DiamondTest
 {
@@ -25,12 +26,14 @@ public class DiamondTest
   @Test
   void canMakeTopLetter(){
 
-    assertThat(kata.diamond(String 'A'),equalTo('A'));
-    String input = "A";
+    assertThat(kata.diamond("A"),is(equalTo("A")));
+
     // if(input != )
   }
 
+
+
 @Test
-  void chckTop(){}
+  void checkTop(){}
 
 }
