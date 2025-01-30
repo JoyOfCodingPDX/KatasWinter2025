@@ -22,11 +22,15 @@
   <developers>
     <developer>
       <id>student1</id>
-      <name>Your Name</name>
+      <name>Aaron Bernard</name>
     </developer>
     <developer>
       <id>student2</id>
-      <name>Your Name</name>
+      <name>Ryan Houlberg</name>
+    </developer>
+    <developer>
+      <id>student3</id>
+      <name>Westley Trin</name>
     </developer>
   </developers>
 

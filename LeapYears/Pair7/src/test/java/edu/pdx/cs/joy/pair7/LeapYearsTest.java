@@ -46,6 +46,17 @@ public class LeapYearsTest
   }
 
   @Test
+  void check2024isLeapYear() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.isLeapYear(2024), equalTo(true));
+  }
+
+    @Test
+  void check2020isLeapYear() {
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.isLeapYear(2020), equalTo(true));
+  }
+
   void hundredIsLeapYear() {
     LeapYears leapYears = new LeapYears();
     assertThat(leapYears.isLeapYear(100), equalTo(true));

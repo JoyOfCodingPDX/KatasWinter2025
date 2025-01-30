@@ -10,13 +10,16 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
-  public boolean isLeapYear(int year) {
-    if (year % 400 == 0 && year % 100 == 0) {
-      return true;
+    public boolean isLeapYear(int year) {
+    if ((year % 400 == 0) && (year % 100 == 0)) {
+        return true;
     } else {
-        return year % 4 == 0;
+        if (year % 4 == 0 && (year % 100 != 0)) {
+        return true;
     }
-  }
+        return false;
+    }
+}
 
 
 
