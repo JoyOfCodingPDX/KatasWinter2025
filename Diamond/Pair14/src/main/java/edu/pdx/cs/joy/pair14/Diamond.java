@@ -55,10 +55,10 @@ public class Diamond {
     //System.out.println(position);
     //System.out.println(Character.toLowerCase(b));
     int position = Character.toUpperCase(b) - 'A' + 1;
-    int betweeenSpaces = -1;
-    for (int j = (int) b; j >= 65; j--) {
+    int betweeenSpaces = (int)b - 1;
+    for (int j = ((int)b)-1; j >= 65; j--) {
 
-      //int leadingSpaces = (int)b - 1;
+      int leadingSpaces = 0;
 
       for (int i = 0; i < leadingSpaces; i++) {
         System.out.print(" ");
@@ -75,7 +75,7 @@ public class Diamond {
       } else {
         System.out.println();
       }
-      betweeenSpaces += 2;
+      betweeenSpaces -= 2;
 
       if (j == (int) b) {
         break;
