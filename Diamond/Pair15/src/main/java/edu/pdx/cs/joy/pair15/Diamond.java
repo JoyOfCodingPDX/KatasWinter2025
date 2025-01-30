@@ -31,8 +31,14 @@ public class Diamond {
       }
     }
   }
-  public String print(Character input, int spaceAmount) {
+  public void print(Character input, int spaceAmount) {
+    for(int i = 0; i < spaceAmount; i++){
+      for(int j = 0; j < spaceAmount; j++){
+        System.out.print(" ");
+      }
+      System.out.print(alphabet[i]);
+      int middleSpaceAmount = 1;
 
-    return this.endLetter;
+    }
   }
 }
