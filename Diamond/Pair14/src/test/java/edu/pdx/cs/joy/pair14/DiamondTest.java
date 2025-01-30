@@ -13,7 +13,7 @@ public class DiamondTest
   @Test
   void testLine() {
     Diamond d = new Diamond();
-    d.drawLine('A');
+    d.drawLine('Z');
 
   }
 
