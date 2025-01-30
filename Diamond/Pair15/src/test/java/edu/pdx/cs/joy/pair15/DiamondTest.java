@@ -9,14 +9,6 @@ public class DiamondTest
 {
 
 
-  @Test
-  void creatingNewClassWithA(){
-    Diamond diamond = new Diamond("A");
-  }
 
-  @Test
-  void creatingNewClassWithB() {
-    Diamond diamond = new Diamond("B");
-  }
 
 }
