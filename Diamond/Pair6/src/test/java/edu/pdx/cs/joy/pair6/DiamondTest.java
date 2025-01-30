@@ -1,17 +1,18 @@
 package edu.pdx.cs.joy.pair6;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
 
 public class DiamondTest
 {
+
+  private DiamondTest kata;
+
   @BeforeEach
-  void setUp(){
-    diamond = Diamond();
+  void setUp() {
+    kata = new DiamondTest();
   }
 
   @Test
@@ -23,7 +24,7 @@ public class DiamondTest
   void canMakeTopLetter(){
     Diamond diamond = new Diamond();
 
-    assertThat(toString().equalsTo("A"));
+    assertThat(toString().equals("A"));
     String input = "A";
     // if(input != )
   }
