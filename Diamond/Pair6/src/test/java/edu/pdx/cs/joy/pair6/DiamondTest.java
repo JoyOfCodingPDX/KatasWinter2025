@@ -10,4 +10,10 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void canMakeTopLetter(){
+    Diamond diamond = new Diamond();
+    
+  }
+
 }

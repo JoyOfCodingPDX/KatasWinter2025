@@ -9,9 +9,15 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Diamond {
+  private String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+  }
+
+  public String printDiamond(String theLetter)
+  {
+    return theLetter;
   }
 }
