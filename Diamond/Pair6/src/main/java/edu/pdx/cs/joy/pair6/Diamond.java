@@ -14,4 +14,10 @@ public class Diamond {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  @Test
+  void canMakeTopLetter(){
+    Diamond diamond = new Diamond();
+    
+  }
 }

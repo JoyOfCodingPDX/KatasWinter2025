@@ -10,4 +10,11 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void testLine() {
+    Diamond d = new Diamond();
+    d.drawLine('A');
+
+  }
+
 }
