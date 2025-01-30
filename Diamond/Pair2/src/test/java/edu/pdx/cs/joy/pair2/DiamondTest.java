@@ -21,5 +21,4 @@ public class DiamondTest
     Diamond hold = new Diamond();
     hold.loop("F");
   }
-
 }
