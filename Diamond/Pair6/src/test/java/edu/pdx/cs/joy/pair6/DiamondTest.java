@@ -10,11 +10,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class DiamondTest
 {
 
-  private DiamondTest kata;
+  private Diamond kata;
 
   @BeforeEach
   void setUp() {
-    kata = new DiamondTest();
+    kata = new Diamond();
   }
 
   @Test
@@ -24,13 +24,13 @@ public class DiamondTest
 
   @Test
   void canMakeTopLetter(){
-    Diamond diamond = new Diamond();
 
-    assertThat(diamond.alphabet.toString(), equalTo("A"));
+    assertThat(kata.diamond(String 'A'),equalTo('A'));
     String input = "A";
     // if(input != )
   }
 
-
+@Test
+  void chckTop(){}
 
 }
