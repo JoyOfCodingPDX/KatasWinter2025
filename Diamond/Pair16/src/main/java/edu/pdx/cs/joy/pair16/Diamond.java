@@ -29,11 +29,22 @@ public class Diamond {
   {
     String pattern = "";
     int index = findIndex(theLetter);
+    int space = index;
 
     //String result = String.valueOf(ch).repeat(n);
 
-    for (int i = 0; i < index; i++) {
-      System.out.print(theLetter);
+    for (int i = 0; i < index + 1; i++) {
+      String line = "";
+      line = String.valueOf(" ").repeat(space);
+      if(i == 0)
+      {
+        line += alphabet.charAt(i);
+      }
+      else
+      {
+        line += alphabet.charAt(i) + String.valueOf(" ").repeat(i * 2 -1) + alphabet.charAt(i);
+      }
+      --space;
     }
     return pattern;
   }
