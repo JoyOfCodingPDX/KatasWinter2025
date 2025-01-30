@@ -13,29 +13,35 @@ public class DiamondTest {
   private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
   private final PrintStream originalOut = System.out;
 
+  private final ByteArrayOutputStream errStream = new ByteArrayOutputStream();
+  private final PrintStream originalErr = System.err;
+
   @BeforeEach
   void setUp() {
-    System.setOut(new PrintStream(outputStream)); // Redirect System.out
+    System.setOut(new PrintStream(outputStream)); // Capture standard output
+    System.setErr(new PrintStream(errStream)); // Capture error output
   }
 
   @AfterEach
   void tearDown() {
     System.setOut(originalOut); // Restore System.out
+    System.setErr(originalErr); // Restore System.err
   }
 
   @Test
   void canInstantiateKataClass() {
     new Diamond(); // Ensure the class can be instantiated
   }
+
   @Test
   void testMainWithMultipleLetters() {
     Diamond.main(new String[]{"AB"});
-    assertTrue(outputStream.toString().contains("Error: Input must be a single letter"));
+    assertTrue(errStream.toString().trim().contains("Error: Input must be a single letter"));
   }
 
   @Test
   void testMainWithNoArguments() {
     Diamond.main(new String[]{});
-    assertTrue(outputStream.toString().contains("Error: Please provide exactly one letter"));
+    assertTrue(errStream.toString().trim().contains("Error: Please provide exactly one letter"));
   }
 }

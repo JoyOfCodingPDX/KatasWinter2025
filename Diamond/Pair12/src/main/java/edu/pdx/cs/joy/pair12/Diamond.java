@@ -10,6 +10,17 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
+  static void printDiamond(char letter) {
+
+    StringBuilder diamondString = new StringBuilder();
+
+    int whiteSpace = letter - 'A';
+
+    for (char start = 'A'; start <= letter; start++ ) {
+        diamondString()
+    }
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
