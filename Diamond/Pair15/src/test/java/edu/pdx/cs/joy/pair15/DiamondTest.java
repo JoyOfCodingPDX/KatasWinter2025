@@ -8,6 +8,12 @@ public class DiamondTest
   @Test
   void canInstantiateKataClass() {
     new Diamond();
-  }
 
+  }
+  @Test
+  void creatingNewClassWithA(){
+    Diamond diamond = new Diamond("A");
+
+
+  }
 }

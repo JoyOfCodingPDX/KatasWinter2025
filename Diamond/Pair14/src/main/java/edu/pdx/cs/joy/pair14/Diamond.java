@@ -16,4 +16,14 @@ public class Diamond {
   }
 
 
+  public void drawLine(char b) {
+    int position = Character.toUpperCase(b) - 'A' + 1;
+    System.out.println(position);
+    System.out.println(Character.toLowerCase(b));
+    int leadingSpaces = position - 1;
+    for (int i = 0; i < leadingSpaces; i++) {
+      System.out.print(" ");
+    }
+    System.out.println(b);
+  }
 }
