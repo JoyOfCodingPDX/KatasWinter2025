@@ -16,10 +16,10 @@ public class Diamond {
     value = value - 64;
     int loop = 1 + (value -1) * 2;
     for(int x = 0; x < value; x++){
-      loop2((char) (65 + x), value, loop);
+      loop2((char) (65 + x), value - x, value);
     }
-    for(int x = value -1; x >= 0; x--){
-      loop2((char) (65+x), value, loop);
+    for(int x = value -2; x >= 0; x--){
+      loop2((char) (65+x), value - x, value);
     }
     return 1;
   }
@@ -29,7 +29,7 @@ public class Diamond {
     int second_dis = displaytotal - displayat;
 
     String dis = "";
-    for (int x= 1; x < displaytotal; x++){
+    for (int x= 1; x < displayat; x++){
       dis += " ";
     }
     dis += letter;
@@ -37,7 +37,7 @@ public class Diamond {
       for(int x=0; x < second_dis; x++){
         dis+= " ";
       }
-      for (int x=2; x < displayat; x++){
+      for (int x=1; x < displaytotal -displayat ; x++){
         dis+= " ";
       }
       dis+= letter;
