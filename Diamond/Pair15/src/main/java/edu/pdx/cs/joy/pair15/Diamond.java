@@ -9,21 +9,24 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Diamond {
-  private String endLetter;
+  private Character endLetter;
   private char [] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
-  public Diamond(String letter) {
-    this.endLetter = letter;
-  }
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if(args.length != 1){
+      //too many inputs?
+      return;
+    }
+    String takingIn = args[0];
+
+
   }
 
-  public void parseLetter(Character input){
+  public void parseLetter(String input){
     int spaceAmount;
-    Character.toUpperCase(input);
+    input.toUpperCase();
     for(int i = 0; i < alphabet.length; i++){
       if(input.equals(alphabet[i])){
         spaceAmount = i+1;
@@ -31,7 +34,7 @@ public class Diamond {
       }
     }
   }
-  public void print(Character input, int spaceAmount) {
+  public void print(String input, int spaceAmount) {
     for(int i = 0; i < spaceAmount; i++){
       for(int j = 0; j < spaceAmount; j++){
         System.out.print(" ");
