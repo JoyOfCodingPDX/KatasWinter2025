@@ -22,14 +22,13 @@
   <developers>
     <developer>
       <id>student1</id>
-      <name>First Last</name>
+      <name>Greg Witt</name>
     </developer>
     <developer>
       <id>student2</id>
       <name>Gustavo Carrillo Castro</name>
     </developer>
   </developers>
-
   <build>
     <plugins>
       <plugin>
