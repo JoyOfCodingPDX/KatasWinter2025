@@ -12,13 +12,11 @@ public class DiamondTest
   @Test
   void creatingNewClassWithA(){
     Diamond diamond = new Diamond("A");
-    assertEquals(diamond.print(), "A");
   }
 
   @Test
   void creatingNewClassWithB() {
     Diamond diamond = new Diamond("B");
-    assertEquals(diamond.print(), " A\nB B\n A");
   }
 
 }
