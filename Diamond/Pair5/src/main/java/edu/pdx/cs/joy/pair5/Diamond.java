@@ -24,8 +24,19 @@ public class Diamond {
     if(letter < 'A' || letter > 'Z') {
       System.err.println("No letter provided.");
     }
-    System.out.println(letter);
 
-    Integer depth = letter - 'A';
+    int depth = letter - 'A';
+
+    for(int i = 0; i <= depth; i++) {
+      for(int j = i; j < depth; j++) {
+        System.out.print(" ");
+      }
+      System.out.print((char)('A' + i));
+      //if statement
+      //if(i > 0){
+        //for()
+      }
+      System.out.println();
+    }
   }
 }

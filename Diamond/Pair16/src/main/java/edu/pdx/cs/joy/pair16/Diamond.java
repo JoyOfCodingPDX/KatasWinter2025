@@ -16,8 +16,8 @@ public class Diamond {
     System.err.println("Missing command line arguments");
   }
 
-  public void printDiamond(String theLetter)
+  public String printDiamond(String theLetter)
   {
-    
+    return theLetter;
   }
 }
