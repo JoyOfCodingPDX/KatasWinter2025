@@ -20,6 +20,7 @@ public class Diamond {
     System.err.println("Missing command line arguments");
   }
 
-
-
+  public String print() {
+    return this.endLetter;
+  }
 }
