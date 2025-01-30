@@ -10,6 +10,7 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
   private String endLetter;
+  private char [] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
   public Diamond(String letter) {
     this.endLetter = letter;
@@ -20,7 +21,18 @@ public class Diamond {
     System.err.println("Missing command line arguments");
   }
 
-  public String print() {
+  public void parseLetter(Character input){
+    int spaceAmount;
+    Character.toUpperCase(input);
+    for(int i = 0; i < alphabet.length; i++){
+      if(input.equals(alphabet[i])){
+        spaceAmount = i+1;
+        print(input, spaceAmount);
+      }
+    }
+  }
+  public String print(Character input, int spaceAmount) {
+
     return this.endLetter;
   }
 }
