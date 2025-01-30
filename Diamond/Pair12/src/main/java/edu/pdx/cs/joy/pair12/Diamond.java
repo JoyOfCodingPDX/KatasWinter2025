@@ -12,17 +12,22 @@ public class Diamond {
 
   static void printDiamond(char letter) {
 
-    StringBuilder diamondString = new StringBuilder();
 
     int whiteSpace = letter - 'A';
+    int i = 0;
+    for (char start = 'A'; start <= letter; start++ ) { // loop until printing middle char
+      String line = "";
 
-    for (char start = 'A'; start <= letter; start++ ) {
-        diamondString()
+      for (int j = 0; j <= whiteSpace; j++) {
+        line += " ";
+      }
+      whiteSpace--;
+      System.out.println(line);
     }
   }
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    printDiamond('C');
   }
 }
