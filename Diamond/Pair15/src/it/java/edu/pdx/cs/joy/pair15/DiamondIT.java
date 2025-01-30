@@ -8,6 +8,8 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class DiamondIT extends InvokeMainTestCase {
 
+  private MainMethodResult invokeMain(String... args) {return invokeMain( Diamond.class, args );}
+
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
@@ -16,9 +18,16 @@ class DiamondIT extends InvokeMainTestCase {
 
   @Test
   void testOut(){
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
     String args = "A";
+    MainMethodResult result = invokeMain(args);
     assertThat(result.getTextWrittenToStandardOut(), containsString("A"));
+    }
+
+    @Test
+  void testB(){
+    String args = "B";
+    MainMethodResult result = invokeMain(args);
+    assertThat(result.getTextWrittenToStandardOut(), containsString("  A  B"));
     }
 
 }
