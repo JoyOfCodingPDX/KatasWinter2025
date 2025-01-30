@@ -16,11 +16,16 @@ public class Diamond {
       System.err.println("Usage: java -jar edu.pdx.cs.joy.pair5.Diamond <filename>");
     }
     char letter = args[0].charAt(0);
+
+    printDiamond(letter);
   }
 
   public static void printDiamond(char letter) {
     if(letter < 'A' || letter > 'Z') {
       System.err.println("No letter provided.");
     }
+    System.out.println(letter);
+
+    Integer depth = letter - 'A';
   }
 }
