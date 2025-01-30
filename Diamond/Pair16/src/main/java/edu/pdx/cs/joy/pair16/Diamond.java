@@ -11,10 +11,7 @@ import com.google.common.annotations.VisibleForTesting;
 public class Diamond {
   private String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  @VisibleForTesting
-  public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
-  }
+
 
   public int findIndex(char letter) {
     for (int i = 0; i < alphabet.length(); i++) {
@@ -31,21 +28,24 @@ public class Diamond {
     int index = findIndex(theLetter);
     int space = index;
 
-    //String result = String.valueOf(ch).repeat(n);
-
     for (int i = 0; i < index + 1; i++) {
       String line = "";
       line = String.valueOf(" ").repeat(space);
-      if(i == 0)
-      {
-        line += alphabet.charAt(i);
-      }
+      if(i == 0) line += alphabet.charAt(i);
       else
-      {
         line += alphabet.charAt(i) + String.valueOf(" ").repeat(i * 2 -1) + alphabet.charAt(i);
-      }
       --space;
+      pattern += line;
     }
+
     return pattern;
+  }
+
+  @VisibleForTesting
+  public static void main(String[] args) {
+    //System.err.println("Missing command line arguments");
+    Diamond d = new Diamond();
+    String diamond = d.printDiamond('C');
+    System.out.println(diamond);
   }
 }
