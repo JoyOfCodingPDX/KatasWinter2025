@@ -7,7 +7,8 @@ public class DiamondTest
 
   @Test
   void canInstantiateKataClass() {
-    new Diamond();
+    Diamond theDiamond = new Diamond();
+    theDiamond.printDiamond("C");
   }
 
 }
