@@ -10,4 +10,10 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void test_loop2(){
+    Diamond hold = new Diamond();
+    hold.loop2('B', 2, 3);
+  }
+
 }
