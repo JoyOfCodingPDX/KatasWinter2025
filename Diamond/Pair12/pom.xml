@@ -23,13 +23,12 @@
     <developer>
       <id>student1</id>
       <name>Greg Witt</name>
-    </developer>:
+    </developer>
     <developer>
       <id>student2</id>
       <name>Gustavo Carrillo Castro</name>
     </developer>
   </developers>
-
   <build>
     <plugins>
       <plugin>
