@@ -16,7 +16,7 @@ public class Diamond {
       return -2;
     }
     int value = (int) letter.charAt(0);
-    if(value < 65 && value > 90){
+    if(value < 65 || value > 90){
       return -1;
     }
     value = value - 64;
