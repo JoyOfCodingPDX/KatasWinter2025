@@ -28,10 +28,19 @@ public class DiamondTest
 
     assertThat(kata.diamond("A"),is(equalTo("A")));
 
-    // if(input != )
   }
 
+@Test
+void canMakeSecondLetter()
+{
+  assertThat(kata.diamond("B"),is(equalTo("B")));
 
+  if(kata.diamonds.)
+  {
+    return kata.diamond("B");
+  }
+
+}
 
 @Test
   void checkTop(){}

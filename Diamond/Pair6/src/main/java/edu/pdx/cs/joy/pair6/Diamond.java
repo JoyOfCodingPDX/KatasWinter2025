@@ -24,7 +24,16 @@ public class Diamond {
     {
       return s;
     }
-
+    if(s.equals('B')
+    {
+      String s = " A";
+      s+= "B B";
+      s = " A ";
+      return s;
+    }
     return s;
   }
+
+
+
 }
