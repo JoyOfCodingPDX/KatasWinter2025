@@ -15,28 +15,29 @@ public class Diamond {
     int value = (int) letter.charAt(0);
     value = value - 64;
     int loop = 1 + (value -1) * 2;
-    for(int x = 0; x < loop; x++){
-      loop2((char) (65 + x), value, 0);
+    for(int x = 0; x < value; x++){
+      loop2((char) (65 + x), value - x, value);
+    }
+    for(int x = value -2; x >= 0; x--){
+      loop2((char) (65+x), value - x, value);
     }
     return 1;
   }
 
   @VisibleForTesting
   public int loop2(char letter, int displayat, int displaytotal){
-    int first_space = 0;
-    int second_space = 0;
     int second_dis = displaytotal - displayat;
 
     String dis = "";
-    for (int x= 1; x < displaytotal; x++){
+    for (int x= 1; x < displayat; x++){
       dis += " ";
     }
     dis += letter;
     if (second_dis > 0){
-      for(int x=1; x < second_dis; x++){
+      for(int x=0; x < second_dis; x++){
         dis+= " ";
       }
-      for (int x=2; x < displayat; x++){
+      for (int x=1; x < displaytotal -displayat ; x++){
         dis+= " ";
       }
       dis+= letter;
