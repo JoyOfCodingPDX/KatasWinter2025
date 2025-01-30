@@ -12,6 +12,15 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if(args.length != 1) {
+      System.err.println("Usage: java -jar edu.pdx.cs.joy.pair5.Diamond <filename>");
+    }
+    char letter = args[0].charAt(0);
+  }
+
+  public static void printDiamond(char letter) {
+    if(letter < 'A' || letter > 'Z') {
+      System.err.println("No letter provided.");
+    }
   }
 }

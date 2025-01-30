@@ -14,4 +14,18 @@ public class Diamond {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public String fizzBuzz(int i) {
+    if(i % 3 == 0 && i % 5 == 0) {
+      return "FizzBuzz";
+    }
+    if (i % 5 == 0) {
+      return "Buzz";
+    }
+    if (i % 3 == 0) {
+      return "Fizz";
+    }
+
+    return String.valueOf(i);
+  }
 }
