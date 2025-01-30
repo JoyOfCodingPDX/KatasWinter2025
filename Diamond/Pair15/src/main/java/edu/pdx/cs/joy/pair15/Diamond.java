@@ -9,8 +9,7 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Diamond {
-  private Character endLetter;
-  private char [] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+  private final static String [] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 
 
   @VisibleForTesting
@@ -20,11 +19,10 @@ public class Diamond {
       return;
     }
     String takingIn = args[0];
-
-
+    parseLetter(takingIn);
   }
 
-  public void parseLetter(String input){
+  public static void parseLetter(String input){
     int spaceAmount;
     input.toUpperCase();
     for(int i = 0; i < alphabet.length; i++){
@@ -33,8 +31,9 @@ public class Diamond {
         print(input, spaceAmount);
       }
     }
+
   }
-  public void print(String input, int spaceAmount) {
+  public static void print(String input, int spaceAmount) {
     for(int i = 0; i < spaceAmount; i++){
       for(int j = 0; j < spaceAmount; j++){
         System.out.print(" ");

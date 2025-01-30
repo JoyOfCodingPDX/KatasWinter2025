@@ -12,7 +12,6 @@ public class Diamond {
 
   static void printDiamond(char letter) {
 
-
     int whiteSpace = letter - 'A';
     int middle = 0;
     for (char start = 'A'; start <= letter; start++ ) { // loop until printing middle char
@@ -22,29 +21,26 @@ public class Diamond {
         line += " ";
       }
 
-      middle = letter - 'A';
       line += (start);
 
       if (start != 'A') {
+        if (start > 'B') {
+          middle++;
+        }
         for (int j = 0; j <= middle; j++) {
           line += " ";
         }
         line += (start);
+        middle++;
       }
-
-
-      /*for (int j = 0; j <= middle; j++) {
-        line += (start);
-      } */
 
       whiteSpace--;
       System.out.println(line);
-      middle++;
     }
   }
 
   @VisibleForTesting
   public static void main(String[] args) {
-    printDiamond('C');
+    printDiamond('D');
   }
 }

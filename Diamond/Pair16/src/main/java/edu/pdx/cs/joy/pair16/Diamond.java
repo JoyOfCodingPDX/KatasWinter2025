@@ -32,9 +32,23 @@ public class Diamond {
       String line = "";
       line = String.valueOf(" ").repeat(space);
       if(i == 0) line += alphabet.charAt(i);
+      if(i == 0 && index != 0) line += "\n";
       else
-        line += alphabet.charAt(i) + String.valueOf(" ").repeat(i * 2 -1) + alphabet.charAt(i);
+        line += alphabet.charAt(i) + String.valueOf(" ").repeat(i * 2 -1) + alphabet.charAt(i) + "\n";
       --space;
+      pattern += line;
+    }
+
+    space += 2;
+
+    for(int i = index-1; i > -1; i--)
+    {
+      String line = "";
+      line = String.valueOf(" ").repeat(space);
+      if(i == 0) line += alphabet.charAt(i);
+      else
+        line += alphabet.charAt(i) + String.valueOf(" ").repeat(i * 2 -1) + alphabet.charAt(i) + "\n";
+      ++space;
       pattern += line;
     }
 
