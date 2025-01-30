@@ -24,9 +24,7 @@ public class Diamond {
     {
       return s;
     }
-    
 
+    return s;
   }
-
-
 }
