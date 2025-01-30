@@ -10,8 +10,10 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
+  String alphabet[] ={"A","B","C","D","E","F"};
+
   @VisibleForTesting
-  public static void main(String[] args) {
+  public static void main(String s) {
     System.err.println("Missing command line arguments");
   }
 

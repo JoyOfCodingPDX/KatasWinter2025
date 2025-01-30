@@ -16,8 +16,11 @@ public class Diamond {
 
     int whiteSpace = letter - 'A';
 
-    for (char start = 'A'; start <= letter; start++ ) {
-        diamondString()
+    for (char start = 'A'; start <= letter; start++ ) { // loop until printing middle char
+      for (int i = 0; i <= whiteSpace; i++) {
+        diamondString.append(" ");
+      }
+      diamondString.append(start);
     }
   }
 

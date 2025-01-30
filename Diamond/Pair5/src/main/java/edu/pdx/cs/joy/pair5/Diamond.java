@@ -17,6 +17,8 @@ public class Diamond {
     }
     char letter = args[0].charAt(0);
 
+    letter = Character.toUpperCase(letter);
+    
     printDiamond(letter);
   }
 
@@ -32,11 +34,28 @@ public class Diamond {
         System.out.print(" ");
       }
       System.out.print((char)('A' + i));
-      //if statement
-      //if(i > 0){
-        //for()
+      if(i > 0) {
+        for(int j = 0; j < 2 * i - 1; j++) {
+          System.out.print(" ");
+        }
+        System.out.print((char)('A' + i));
+      }
+      System.out.println();
+    }
+
+    for(int i = depth - 1; i >= 0; i--) {
+      for(int j = depth; j > i; j--) {
+        System.out.print(" ");
+      }
+      System.out.print((char)('A' + i));
+      if(i > 0) {
+        for(int j = 0; j < 2 * i - 1; j++) {
+          System.out.print(" ");
+        }
+        System.out.print((char)('A' + i));
       }
       System.out.println();
     }
   }
+
 }
