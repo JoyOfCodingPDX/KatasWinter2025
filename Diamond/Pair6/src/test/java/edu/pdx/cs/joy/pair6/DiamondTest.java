@@ -6,15 +6,16 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class DiamondTest
 {
 
-  private DiamondTest kata;
+  private Diamond kata;
 
   @BeforeEach
   void setUp() {
-    kata = new DiamondTest();
+    kata = new Diamond();
   }
 
   @Test
@@ -24,13 +25,15 @@ public class DiamondTest
 
   @Test
   void canMakeTopLetter(){
-    Diamond diamond = new Diamond();
 
-    assertThat(diamond.alphabet.toString(), equalTo("A"));
-    String input = "A";
+    assertThat(kata.diamond("A"),is(equalTo("A")));
+
     // if(input != )
   }
 
 
+
+@Test
+  void checkTop(){}
 
 }
