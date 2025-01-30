@@ -5,10 +5,14 @@ import org.junit.jupiter.api.Test;
 
 public class DiamondTest
 {
+  private Diamond diamond;
+
+  public DiamondTest() {
+    diamond = new Diamond();
+  }
 
   @BeforeAll
   static void setUp() {
-    Diamond diamond = new Diamond();
   }
 
   @Test
