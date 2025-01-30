@@ -9,8 +9,5 @@ public class DiamondTest
   void canInstantiateKataClass() {
     new Diamond();
   }
-  @Test
-  void ifItsNotaLetter(){
-    assetEquals("A", captureOutput('A'));
-  }
+
 }

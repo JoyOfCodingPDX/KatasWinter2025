@@ -20,8 +20,12 @@ public class Diamond {
       int difference = asciiOfArg - asciiOfA;
 
       for (int i = 0; i < difference; i++) {
-        String padding = "".repeat(difference);
-        System.out.println(args[0]);
+        String start_padding = "".repeat(difference-i);
+        String target = start_padding + args[0];
+        String inner_padding = "".repeat(i*2-1);
+        System.out.println(target);
+
+
       }
     }
   }
