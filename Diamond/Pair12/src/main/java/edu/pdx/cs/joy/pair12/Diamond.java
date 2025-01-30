@@ -14,13 +14,29 @@ public class Diamond {
 
 
     int whiteSpace = letter - 'A';
-    int i = 0;
+    int middle = 0;
     for (char start = 'A'; start <= letter; start++ ) { // loop until printing middle char
       String line = "";
 
       for (int j = 0; j <= whiteSpace; j++) {
         line += " ";
       }
+      middle = letter - start;
+      ++middle; //
+      line += (start);
+
+      if (start != 'A') {
+        for (int j = 0; j <= middle; j++) {
+          line += " ";
+        }
+        line += (start);
+      }
+
+
+      /*for (int j = 0; j <= middle; j++) {
+        line += (start);
+      } */
+
       whiteSpace--;
       System.out.println(line);
     }
