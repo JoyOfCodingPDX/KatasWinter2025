@@ -13,11 +13,15 @@ public class Diamond {
   String alphabet[] ={"A","B","C","D","E","F"};
 
   @VisibleForTesting
-  public static void main(String s) {
+  public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
 
+  public String diamond(Strings s)
+  {
+    
 
+  }
 
 
 }
