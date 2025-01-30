@@ -21,8 +21,8 @@ public class Diamond {
       for (int j = 0; j <= whiteSpace; j++) {
         line += " ";
       }
-      middle = letter - start;
-      ++middle; //
+
+      middle = letter - 'A';
       line += (start);
 
       if (start != 'A') {
@@ -39,6 +39,7 @@ public class Diamond {
 
       whiteSpace--;
       System.out.println(line);
+      middle++;
     }
   }
 
