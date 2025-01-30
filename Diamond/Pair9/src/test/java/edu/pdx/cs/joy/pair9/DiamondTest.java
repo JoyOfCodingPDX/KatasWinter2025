@@ -1,11 +1,12 @@
 package edu.pdx.cs.joy.pair9;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,8 +36,9 @@ public class DiamondTest {
   @Test
   void testMainWithInvalidNumber() {
     Diamond.main(new String[]{"1"});
-    assertTrue(outputStream.toString().contains("Error: Input must be a single letter"));
+    assertTrue(errStream.toString().trim().contains("Error: Input must be a single letter"));
   }
+  
   @Test
   void testMainWithValidLetter() {
     Diamond.main(new String[]{"C"});
@@ -47,6 +49,18 @@ public class DiamondTest {
                     " B B\n" +
                     "  A\n";
     assertEquals(expectedOutput, outputStream.toString());
+  }
+
+  @Test
+  void testMainWithWrongOutput() {
+    Diamond.main(new String[]{"D"});
+    String expectedOutput =
+            "  A\n" +
+                    " B B\n" +
+                    "C   C\n" +
+                    " B B\n" +
+                    "  A\n";
+    assertNotEquals(expectedOutput, outputStream.toString());
   }
 
   @Test

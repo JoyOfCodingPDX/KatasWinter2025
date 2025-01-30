@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.pair6;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.common.base.Strings;
 
 /**
  * A class for getting started with a code kata
@@ -17,11 +18,13 @@ public class Diamond {
     System.err.println("Missing command line arguments");
   }
 
-  public String diamond(Strings s)
+  public String diamond(String s)
   {
-    
+    if(s.equals('A'))
+    {
+      return s;
+    }
 
+    return s;
   }
-
-
 }
