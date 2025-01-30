@@ -35,7 +35,7 @@ public class DiamondTest {
   @Test
   void testMainWithInvalidNumber() {
     Diamond.main(new String[]{"1"});
-    assertTrue(outputStream.toString().contains("Error: Input must be a single letter"));
+    assertTrue(errStream.toString().trim().contains("Error: Input must be a single letter"));
   }
   @Test
   void testMainWithValidLetter() {
