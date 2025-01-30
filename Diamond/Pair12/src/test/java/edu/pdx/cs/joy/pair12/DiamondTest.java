@@ -10,4 +10,10 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void testCDiamond() {
+    Diamond testDiamond = new Diamond();
+    testDiamond.printDiamond('C');
+  }
+
 }

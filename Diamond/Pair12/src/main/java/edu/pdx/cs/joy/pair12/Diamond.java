@@ -10,8 +10,40 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
+  static void printDiamond(char letter) {
+
+
+    int whiteSpace = letter - 'A';
+    int middle = 0;
+    for (char start = 'A'; start <= letter; start++ ) { // loop until printing middle char
+      String line = "";
+
+      for (int j = 0; j <= whiteSpace; j++) {
+        line += " ";
+      }
+      middle = letter - start;
+      ++middle; //
+      line += (start);
+
+      if (start != 'A') {
+        for (int j = 0; j <= middle; j++) {
+          line += " ";
+        }
+        line += (start);
+      }
+
+
+      /*for (int j = 0; j <= middle; j++) {
+        line += (start);
+      } */
+
+      whiteSpace--;
+      System.out.println(line);
+    }
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    printDiamond('C');
   }
 }
