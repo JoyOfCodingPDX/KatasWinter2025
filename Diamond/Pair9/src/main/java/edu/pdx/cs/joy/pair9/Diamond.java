@@ -12,6 +12,14 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length == 0) {
+      System.err.println("Error: Please provide exactly one letter as input.");
+      return;
+    }
+
+    if (args[0].length() != 1 || !Character.isLetter(args[0].charAt(0))) {
+      System.err.println("Error: Input must be a single letter (A-Z or a-z).");
+      return;
+    }
   }
 }
