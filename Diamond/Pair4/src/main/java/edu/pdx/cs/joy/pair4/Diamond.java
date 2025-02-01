@@ -15,44 +15,26 @@ public class Diamond {
   static ArrayList<String> alpha = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
       "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"));
 
-  private static void printSpaces(int index) {
-    for (int i = 0; i < index; i++) {
-      System.out.print(" ");
-    }
-  }
-
-  private static void printTopRow(int index) {
-    printSpaces(index);
-    System.out.println(alpha.get(0));
-  }
-
-  private static void printRows(int spacesBefore, int spacesInMiddle, int curr, int index) {
-    printSpaces(spacesBefore);
-    System.out.print(alpha.get(curr));
-    printSpaces(spacesInMiddle);
-    System.out.print(alpha.get(curr));
-    System.out.println();
-    if (curr == index) {
+  private static void printRows(int spacesInMiddle, int curr, int index) {
+    System.out.println(" ".repeat(index - curr) + alpha.get(curr) + " ".repeat(spacesInMiddle) + alpha.get(curr));
+    if (curr == index || index == 0) {
       return;
     }
-    printRows(spacesBefore - 1, spacesInMiddle + 2, curr + 1,
+    printRows(spacesInMiddle + 2, curr + 1,
         index);
-    printSpaces(spacesBefore);
-    System.out.print(alpha.get(curr));
-    printSpaces(spacesInMiddle);
-    System.out.print(alpha.get(curr));
-    System.out.println();
+    System.out.println(" ".repeat(index - curr) + alpha.get(curr) + " ".repeat(spacesInMiddle) + alpha.get(curr));
   }
 
   @VisibleForTesting
   public static void main(String[] args) {
     char letter = args[0].charAt(0);
     int index = alpha.indexOf(String.valueOf(letter));
-    Diamond.printTopRow(index);
+    int curr = 0;
+    System.out.println(" ".repeat(index) + alpha.get(0));
     if (index != 0) {
       // print remaining rows
-      printRows(index - 1, 1, 1, index);
-      Diamond.printTopRow(index);
+      printRows(1, curr + 1, index);
+      System.out.println(" ".repeat(index) + alpha.get(0));
     }
   }
 }
