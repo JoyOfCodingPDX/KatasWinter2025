@@ -12,14 +12,8 @@ import java.util.Arrays;
  * class (and its tests).
  */
 public class Diamond {
-   static ArrayList<String> alpha = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"));
-
-  public void print(String letter, int index){
-    System.out.print(letter);
-    if (index > 0) {
-      printSpaces(index);
-    }
-  }
+  static ArrayList<String> alpha = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+      "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"));
 
   private static void printSpaces(int index) {
     for (int i = 0; i < index; i++) {
@@ -29,41 +23,36 @@ public class Diamond {
 
   private static void printTopRow(int index) {
     printSpaces(index);
-    System.out.print(alpha);
+    System.out.println(alpha.get(0));
   }
 
-  private static int getSpacesInMiddle(int curr, boolean building) {
-    return building ? curr + 2 : curr - 2;
-  }
-  private static int getSpacesBeforeAfter(int curr, boolean building) {
-    return building ? curr - 1 : curr + 1;
-  }
-
-
-  private static void printRows(int spacesBefore, int spacesInMiddle, int index, boolean building) {
-    if(spacesBefore == index - 1 && !building) {
+  private static void printRows(int spacesBefore, int spacesInMiddle, int curr, int index) {
+    printSpaces(spacesBefore);
+    System.out.print(alpha.get(curr));
+    printSpaces(spacesInMiddle);
+    System.out.print(alpha.get(curr));
+    System.out.println();
+    if (curr == index) {
       return;
     }
+    printRows(spacesBefore - 1, spacesInMiddle + 2, curr + 1,
+        index);
     printSpaces(spacesBefore);
-    System.out.print(alpha);
+    System.out.print(alpha.get(curr));
     printSpaces(spacesInMiddle);
+    System.out.print(alpha.get(curr));
     System.out.println();
-    if (spacesBefore <= 0) {
-      building = !building;
-    }
-    printRows(getSpacesBeforeAfter(spacesBefore, building), getSpacesInMiddle(spacesInMiddle, building), index, building);
   }
-
 
   @VisibleForTesting
   public static void main(String[] args) {
     char letter = args[0].charAt(0);
     int index = alpha.indexOf(String.valueOf(letter));
     Diamond.printTopRow(index);
-    if (index != 0){
+    if (index != 0) {
       // print remaining rows
-      printRows(index - 1, 1, index, true);
+      printRows(index - 1, 1, 1, index);
+      Diamond.printTopRow(index);
     }
-    printTopRow(0);
   }
 }
