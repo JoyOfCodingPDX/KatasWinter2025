@@ -23,6 +23,7 @@ accordingly
     <module>LeapYears</module>
     <module>Diamond</module>
     <module>GildedRose</module>
+    <module>Lags</module>
   </modules>
   <inceptionYear>2025</inceptionYear>
   <organization>
