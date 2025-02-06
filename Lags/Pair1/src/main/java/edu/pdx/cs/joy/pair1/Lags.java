@@ -12,9 +12,28 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Lags {
   @VisibleForTesting
-  public static int nextElement(List<Integer> start, List<Integer> length, int mark){
+  public static int nextElement(List<Integer> start, List<Integer> length, int index){
+    int startVal = start.get(index);
+    int lengthVal = length.get(index);
+    if (start.size() == index+1){
+      return -1;
+    }
+    for(int x = index + 1; x < start.size(); x++){
+      if(startVal + lengthVal < start.get(x)){
+        return x;
+      }
+    }
+    return -1;
+  }
 
-    return 1;
+  @VisibleForTesting
+  public static int maxWeight(int index, List<Integer> start, List<Integer> length, List<Integer> weight){
+    if (((weight.get(index) + maxWeight(nextElement(start, length, index), start, length, weight)) >= maxWeight(index + 1, start, length, weight))) {
+      return weight.get(index) + maxWeight(nextElement(start, length, index), start, length, weight);
+    }
+    else {
+      return maxWeight(index + 1, start, length, weight);
+    }
   }
 
 
