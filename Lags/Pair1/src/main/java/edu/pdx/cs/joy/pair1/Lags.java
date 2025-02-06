@@ -28,9 +28,12 @@ public class Lags {
 
   @VisibleForTesting
   public static int maxWeight(int index, List<Integer> start, List<Integer> length, List<Integer> weight){
-
-
-    return 1;
+    if (((weight.get(index) + maxWeight(nextElement(start, length, index), start, length, weight)) >= maxWeight(index + 1, start, length, weight))) {
+      return weight.get(index) + maxWeight(nextElement(start, length, index), start, length, weight);
+    }
+    else {
+      return maxWeight(index + 1, start, length, weight);
+    }
   }
 
 
