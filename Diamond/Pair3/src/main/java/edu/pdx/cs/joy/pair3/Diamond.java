@@ -2,14 +2,9 @@ package edu.pdx.cs.joy.pair3;
 
 import com.google.common.annotations.VisibleForTesting;
 
-/**
- * A class for getting started with a code kata
- *
- * Use IntelliJ's "Refactor | Rename..." command to change the name of this
- * class (and its tests).
- */
 public class Diamond {
 
+<<<<<<< HEAD
   @VisibleForTesting
   public static void main(String[] args) {
     return;
@@ -47,3 +42,56 @@ public class Diamond {
 
 
 }
+=======
+    @VisibleForTesting
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.err.println("Missing command line arguments");
+            return;
+        }
+        if (args.length > 1) {
+            System.err.println("Too many arguments. Please provide a single letter.");
+            return;
+        }
+
+        char inputChar = args[0].toUpperCase().charAt(0);
+
+        if (!Character.isLetter(inputChar)) {
+            System.err.println("Invalid input: Please enter a letter from A to Z");
+            return;
+        }
+
+        printDiamond(inputChar);
+    }
+
+    public static void printDiamond(char letter) {
+        int difference = letter - 'A';
+        int currentChar = 'A';
+
+        // Top half of the diamond
+        for (int i = 0; i <= difference; i++) {
+            String startPadding = " ".repeat(difference - i);
+            String innerPadding = (i == 0) ? "" : " ".repeat(i * 2 - 1);
+            String target = (i == 0) 
+                ? startPadding + (char) currentChar 
+                : startPadding + (char) currentChar + innerPadding + (char) currentChar;
+
+            System.out.println(target);
+            currentChar++;
+        }
+
+        // Bottom half of the diamond
+        currentChar--;
+        for (int i = difference - 1; i >= 0; i--) {
+            currentChar--;
+            String startPadding = " ".repeat(difference - i);
+            String innerPadding = (i == 0) ? "" : " ".repeat(i * 2 - 1);
+            String target = (i == 0) 
+                ? startPadding + (char) currentChar 
+                : startPadding + (char) currentChar + innerPadding + (char) currentChar;
+
+            System.out.println(target);
+        }
+    }
+}
+>>>>>>> 0c844f3 (Implemented diamond)
