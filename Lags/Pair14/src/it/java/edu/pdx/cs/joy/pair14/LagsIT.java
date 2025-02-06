@@ -15,13 +15,25 @@ class LagsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
-  String [] args = {"AF514", "0" , "5", "10"};
+  String [] args = {"AF514", "0" , "5", "10",
+          "CO5" ,"3", "7", "14",
+          "AF515" ,"5" ,"9", "7",
+          "BA01" ,"6", "9", "8"};
+
   @Disabled
   @Test
   void willBuildAirline(){
     InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, "AF514", "0" , "5", "10");
     assertThat(result.getTextWrittenToStandardOut(), containsString("AF514"));
   }
+
+  @Test
+  void returnFirstFlight(){
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, args);
+    assertThat(result.getTextWrittenToStandardOut(), containsString("AF514"));
+
+  }
+
 
 
 }

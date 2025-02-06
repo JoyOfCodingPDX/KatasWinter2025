@@ -34,8 +34,11 @@ public class Lags {
     solve(flights);
   }
 
-  public static void solve(List<Flight> flights) {
-    Flight flight = flights.get(0);
+  public static List<Flight> solve(List<Flight> flights) {
+    Flight flight = flights.get(flights.size() - 1);
     List<Flight> candidateFlights = flights.stream().filter((Flight currentFlight) -> flight.endTime <= currentFlight.startTime).toList();
+//    candidateFlights.stream().map((candidateFlight) -> new List) // Combination of flights
+//    List<List<Flight>> = //
+    return List.of();
   }
 }
