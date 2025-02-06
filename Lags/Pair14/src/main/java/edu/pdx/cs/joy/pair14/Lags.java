@@ -2,6 +2,9 @@ package edu.pdx.cs.joy.pair14;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  * A class for getting started with a code kata
  *
@@ -10,8 +13,16 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Lags {
 
+  Flight flight;
+
+
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
-  }
+    if(args.length == 0) {
+      System.err.println("Missing command line arguments");
+    }
+
+
+
+
 }
