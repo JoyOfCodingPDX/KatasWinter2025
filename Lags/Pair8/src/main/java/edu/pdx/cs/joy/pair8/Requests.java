@@ -1,6 +1,9 @@
 package edu.pdx.cs.joy.pair8;
 
-public class Requests {
+import java.util.Comparator;
+import java.util.List;
+
+public class Requests implements Comparator<Requests> {
 
     // attributes
     String plane;
@@ -17,5 +20,8 @@ public class Requests {
         this.duration = duration;
     }
 
-
+    @Override
+    public int compare( Requests a, Requests b) {
+        return Integer.compare(a.endTime, b.endTime);
+    }
 }

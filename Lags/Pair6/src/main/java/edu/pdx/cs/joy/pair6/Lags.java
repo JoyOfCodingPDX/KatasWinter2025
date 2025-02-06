@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair6;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.List;
+
 /**
  * A class for getting started with a code kata
  *
@@ -24,6 +26,24 @@ public class Lags {
         this.startTime = startTime;
         this.duration = duration;
         this.price = price;
+    }
+
+    public boolean checkForConflict(Lags other) {
+        //True if no conflict
+        return ((this.startTime + this.duration) < other.startTime);
+    }
+
+    public Lags compareLags(List<Lags> lagsList) {
+        Integer highestPrice = null;
+        for (Lags lags : lagsList) {
+            for (Lags otherLags : lagsList) {
+                if (lags != otherLags) {
+                    if (lags.checkForConflict(otherLags)) {
+                        
+                    }
+                }
+            }
+        }
     }
 
   @VisibleForTesting

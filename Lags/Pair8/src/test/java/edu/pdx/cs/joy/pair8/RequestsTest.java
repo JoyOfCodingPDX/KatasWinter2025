@@ -17,4 +17,15 @@ public class RequestsTest {
         assertThat(testReq.endTime, equalTo(3));
         assertThat(testReq.price, equalTo(3));
     }
+
+    @Test
+    void canSortRequests() {
+        Requests testReq = new Requests("Test1", 1, 2,3);
+        Requests testReq2 = new Requests("Test2", 4, 3,5);
+        Lags.requests.add(testReq);
+        Lags.requests.add(testReq2);
+
+        assertThat(Lags.requests.sort());
+
+    }
 }

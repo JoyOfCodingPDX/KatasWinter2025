@@ -13,16 +13,16 @@ public class Flight {
         this.price = price;
     }
 
-    private String getName(){
+    public String getName(){
         return this.name;
     }
-    private int getStartTime(){
+    public int getStartTime(){
         return this.startTime;
     }
-    private int getEndTime(){
+    public int getEndTime(){
         return this.endTime;
     }
-    private int getPrice(){
+    public int getPrice(){
         return this.price;
     }
 
