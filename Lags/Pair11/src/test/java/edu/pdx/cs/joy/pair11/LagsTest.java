@@ -26,4 +26,10 @@ public class LagsTest
 		int result = lag.getMaxProfit();
         	assertEquals(18, result); 
         }
+ @Test
+  void testGetMaxProfitNoFlights() {
+    List<Lags.Flight> flights = new ArrayList<>();
+    int result = Lags.getMaxProfit(flights);
+    assertEquals(0, result);
+  }
 }
