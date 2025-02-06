@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair15;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.Stack;
+
 /**
  * A class for getting started with a code kata
  *
@@ -12,6 +14,19 @@ public class Lags {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length <1 ){
+      System.err.println("Missing command line arguments");}
+
+    class Bid{
+
+    }
+
+    Stack<Integer> solutionQueue = new Stack<>();
+
+    // name start end $$
+    for (String arg : args){
+
+    }
   }
 }
+
