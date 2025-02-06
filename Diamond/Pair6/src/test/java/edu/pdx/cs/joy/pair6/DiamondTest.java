@@ -35,10 +35,10 @@ void canMakeSecondLetter()
 {
   assertThat(kata.diamond("B"),is(equalTo("B")));
 
-  if(kata.diamonds.)
-  {
-    return kata.diamond("B");
-  }
+//  if(kata.diamonds.)
+//  {
+//    return kata.diamond("B");
+//  }
 
 }
 

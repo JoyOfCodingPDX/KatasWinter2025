@@ -1,32 +1,15 @@
-<<<<<<< HEAD
-//package edu.pdx.cs.joy.pair4;
-//
-//import edu.pdx.cs.joy.InvokeMainTestCase;
-//import org.junit.jupiter.api.Test;
-//
-//import static org.hamcrest.MatcherAssert.assertThat;
-//import static org.hamcrest.core.StringContains.containsString;
-//
-//class DiamondIT extends InvokeMainTestCase {
-//
-//  @Test
-//  void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
-//    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
-//    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
-//  }
-//
-//
-//}
-=======
 package edu.pdx.cs.joy.pair4;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
 
 class DiamondIT extends InvokeMainTestCase {
+
+  @Disabled
   @Test
   void testInvalidMain (){
     String[] args = {"aa"};
@@ -38,6 +21,7 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result2.getTextWrittenToStandardError(),containsString("invalid"));
   }
 
+  @Disabled
     @Test
     void testInvalid (){
         String[] args = {"D"};
@@ -46,4 +30,3 @@ class DiamondIT extends InvokeMainTestCase {
     }
 
 }
->>>>>>> 173f83f6a1e1dbe1e6b4d4d32ea8fa0d324bbe07

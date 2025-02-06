@@ -8,7 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DiamondTest
 {
 
+  @Test
+  void needOneTest() {
 
+  }
 
 
 }

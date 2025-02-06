@@ -2,13 +2,8 @@ package edu.pdx.cs.joy.pair4;
 
 import com.google.common.annotations.VisibleForTesting;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
-=======
-import java.security.SecureRandom;
->>>>>>> 173f83f6a1e1dbe1e6b4d4d32ea8fa0d324bbe07
 
 /**
  * A class for getting started with a code kata
@@ -17,84 +12,29 @@ import java.security.SecureRandom;
  * class (and its tests).
  */
 public class Diamond {
-   static ArrayList<String> alpha = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"));
+  static ArrayList<String> alpha = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+      "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"));
 
-  public void print(String letter, int index){
-    System.out.print(letter);
-    if (index > 0) {
-      printSpaces(index);
-    }
+  private static void printSingleCharRow(int index) {
+    System.out.println(" ".repeat(index) + alpha.get(0));
   }
 
-  private static void printSpaces(int index) {
-    for (int i = 0; i < index; i++) {
-      System.out.print(" ");
-    }
-  }
-
-  private static void printTopRow(int index) {
-    printSpaces(index);
-    System.out.print(alpha);
-  }
-
-  private static int getSpacesInMiddle(int curr, boolean building) {
-    return building ? curr + 2 : curr - 2;
-  }
-  private static int getSpacesBeforeAfter(int curr, boolean building) {
-    return building ? curr - 1 : curr + 1;
-  }
-
-
-  private static void printRows(int spacesBefore, int spacesInMiddle, int index, boolean building) {
-    if(spacesBefore == index - 1 && !building) {
+  private static void printDoubleCharRow(int spacesInMiddle, int curr, int index) {
+    System.out.println(" ".repeat(index - curr) + alpha.get(curr) + " ".repeat(spacesInMiddle) + alpha.get(curr));
+    if (curr == index || index == 0) {
       return;
     }
-    printSpaces(spacesBefore);
-    System.out.print(alpha);
-    printSpaces(spacesInMiddle);
-    System.out.println();
-    if (spacesBefore <= 0) {
-      building = !building;
-    }
-    printRows(getSpacesBeforeAfter(spacesBefore, building), getSpacesInMiddle(spacesInMiddle, building), index, building);
+    printDoubleCharRow(spacesInMiddle + 2, curr + 1, index);
+    System.out.println(" ".repeat(index - curr) + alpha.get(curr) + " ".repeat(spacesInMiddle) + alpha.get(curr));
   }
-
 
   @VisibleForTesting
   public static void main(String[] args) {
-<<<<<<< HEAD
-    char letter = args[0].charAt(0);
-    int index = alpha.indexOf(String.valueOf(letter));
-    Diamond.printTopRow(index);
-    if (index != 0){
-      // print remaining rows
-      printRows(index - 1, 1, index, true);
+    int index = alpha.indexOf(String.valueOf(args[0].charAt(0)));
+    printSingleCharRow(index);
+    if (index != 0) {
+      printDoubleCharRow(1, 1, index);
+      printSingleCharRow(index);
     }
-    printTopRow(0);
-=======
-
-    int gap = 0;
-    if(args.length != 1 || args[0].length() != 1){
-      System.err.print("invalid");
-    }
-
-    int end = args[0].charAt(0);
-    for( int i = 65; i <= end;++i){
-      if(i != 65 || i != end){
-        char lett = (char) i;
-        System.out.print(lett);
-
-        for( int j = 0; j < gap; ++j){
-          System.out.print(" ");
-        }
-
-        System.out.print(lett);
-      }
-
-      ++gap;
-      System.out.println();
-    }
-
->>>>>>> 173f83f6a1e1dbe1e6b4d4d32ea8fa0d324bbe07
   }
 }

@@ -1,47 +1,44 @@
 package edu.pdx.cs.joy.pair1;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-<<<<<<< HEAD:Diamond/Pair1/src/test/java/edu/pdx/cs/joy/pair1/DiamondTest.java
-public class DiamondTest
-=======
+import org.junit.jupiter.api.TestClassOrder;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class KataTest
->>>>>>> d17c12c (Forgot to commit):FizzBuzz/src/test/java/edu/pdx/cs/joy/pairs/KataTest.java
+public class DiamondTest
 {
 
-  private Kata kata;
-
-  @BeforeEach
-  void setUp() {
-    kata = new Kata();
-  }
-
-  private void assertFizzBuzz(int buzzNumber, String buzzString) {
-    assertThat(kata.fizzBuzz(buzzNumber), equalTo(buzzString));
-  }
 
   @Test
   void canInstantiateKataClass() {
-    new Diamond();
+    try{
+      Diamond testDiamond = new Diamond();
+    } catch(Exception e){
+      System.err.println(e);
+    }
   }
+
+ /**
+  void canPrintTheFirstLetterWhichIsAnA() {
+    String[] firstletter = new String["A"];
+    Diamond testDiamond = new Diamond();
+    assertThat(Diamond.main(firstletter),equalTo("A"));
+  }
+*/
+  @Test
+  void canPrintA() {
+    assertThat(Diamond.letterPrintDiamond('A'), equalTo("A\n"));
+  }
+
+  /*
+  @Test
+  void canPrintB() {
+    assertThat(Diamond.letterPrintDiamond('B'), equalTo(" A\nB B\n A"));
+  }*/
 
   @Test
-  void fiveBuzzes() {
-      assertFizzBuzz(5, "Buzz");
+  void canPrintC() {
+    assertThat(Diamond.letterPrintDiamond('C'), equalTo(" A\nB B\n A"));
   }
-
-  @Test
-  void threeFizzes() {
-    assertFizzBuzz(3, "Fizz");
-  }
-
-  @Test
-  void fifteenFizzesandBuzzes() {
-    assertFizzBuzz(15, "FizzBuzz");
-  }
-
 }

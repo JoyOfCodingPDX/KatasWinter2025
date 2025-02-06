@@ -2,6 +2,12 @@ package edu.pdx.cs.joy.pair3;
 
 import org.junit.jupiter.api.Test;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import org.hamcrest.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+>>>>>>> db31d1dc6e9eab026896cfa149d115d73b596d9f
 
 public class DiamondTest
 {
@@ -30,10 +36,14 @@ public class DiamondTest {
 >>>>>>> 0c844f3 (Implemented diamond)
 
   @Test
-  void canInstantiateKataClass() {
-    new Diamond();
+  void diamondtest() {
+
+    String myString = " C";
+    assertEquals(myString, Diamond.space(1, 0, 'C'));
+
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @Test
@@ -109,3 +119,17 @@ public class DiamondTest {
     }
 >>>>>>> 0c844f3 (Implemented diamond)
 }
+=======
+  @Test
+  void diamondtest2() {
+    String myString = "X   X";
+    assertEquals(myString, Diamond.space(0,3,'X'));
+  }
+
+
+  @Test
+  void printDiamonftest() {
+    Diamond.print_dimond('A');
+  }
+}
+>>>>>>> db31d1dc6e9eab026896cfa149d115d73b596d9f
