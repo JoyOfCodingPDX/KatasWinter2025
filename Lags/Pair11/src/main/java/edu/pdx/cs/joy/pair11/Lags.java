@@ -1,4 +1,5 @@
 package edu.pdx.cs.joy.pair11;
+import java.util.Vector;
 
 // Following imports used for file reading (README):
 import java.io.BufferedReader;
@@ -13,11 +14,18 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Lags {
-	public static class Flight {
-		String flightID;  
-		int startTime;  
-		int endTime;  
-		int price;   
+
+    private Vector<Lags.Flight> flights;
+
+    public Lags() {
+        flights = new Vector<>();
+    }
+
+	public class Flight {
+		private String flightID;  
+		private int startTime;  
+		private int endTime;  
+		private int price;   
 
 		// Constructor to initialize a flight object
 		public Flight(String flightID, int startTime, int duration, int price) {
@@ -26,7 +34,8 @@ public class Lags {
 			this.endTime = startTime + duration;  // Compute end time
 			this.price = price;
 		}
-	}    
+	} 
+
 	static String ReadFile(String fileNameOrPath) {
 		String ABEAS = "";
 		try (BufferedReader reader = new BufferedReader(new FileReader(fileNameOrPath))) {
