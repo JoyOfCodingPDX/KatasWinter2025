@@ -53,7 +53,7 @@ public class Lags {
     listOfCompanies.add(new Companies(6, 9, 8));
 
     for (Companies companies : listOfCompanies) {
-      
+
     }
 
 
