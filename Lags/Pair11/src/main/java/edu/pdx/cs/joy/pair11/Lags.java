@@ -36,6 +36,25 @@ public class Lags {
 		}
 	} 
 
+	private static int findLastNonOverlappingFlight(List<Flight> flights, int index) {
+     	   int low = 0, high = index - 1;
+
+        	while (low <= high) {
+            	int mid = (low + high) / 2;
+
+            	if (flights.get(mid).endTime <= flights.get(index).startTime) {
+                	if (mid + 1 < flights.size() && flights.get(mid + 1).endTime <= flights.get(index).startTime) {
+                    	low = mid + 1; 
+                } else {
+                 	   return mid; 
+                }
+            } else {
+                high = mid - 1; 
+            }
+        }
+
+        return -1; 
+    }
 	static String ReadFile(String fileNameOrPath) {
 		String ABEAS = "";
 		try (BufferedReader reader = new BufferedReader(new FileReader(fileNameOrPath))) {

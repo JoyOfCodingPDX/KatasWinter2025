@@ -19,14 +19,13 @@ public class RequestsTest {
     }
 
     @Test
-    void canGetRequestList() {
-        Lags lags = new Lags();
+    void canSortRequests() {
         Requests testReq = new Requests("Test1", 1, 2,3);
         Requests testReq2 = new Requests("Test2", 4, 3,5);
-        lags.requestsList.add(testReq);
-        lags.requestsList.add(testReq2);
+        Lags.requests.add(testReq);
+        Lags.requests.add(testReq2);
 
-        assertThat();
+        assertThat(Lags.requests.sort());
 
     }
 }
