@@ -33,6 +33,9 @@ public class Lags {
   }
 
   public int findMaxProfit(List<FlightRequest> requests) {
+      if(requests.isEmpty()) {
+          return 0;
+      }
     // Step 1: Sort requests based on end time
     requests.sort(Comparator.comparingInt(f -> f.end));
     
