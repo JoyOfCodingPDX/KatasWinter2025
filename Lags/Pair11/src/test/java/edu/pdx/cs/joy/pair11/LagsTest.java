@@ -23,5 +23,7 @@ public class LagsTest
 
     @Test
         void testGetMaxProfitBasic() {
+		int result = lag.getMaxProfit();
+        	assertEquals(18, result); 
         }
 }
