@@ -24,7 +24,6 @@ public class LagsTest
     lagsList.add(new Lags(1, 2, 3));
   }
 
-
   @Test
   void canCompareLags(){
 
