@@ -15,6 +15,17 @@
   <description>A simple project for getting started with code LeapYears</description>
   <url>http://www.cs.pdx.edu</url>
 
+  <developers>
+    <developer>
+      <id>student1</id>
+      <name>Ahmed Al-Badri</name>
+    </developer>
+    <developer>
+      <id>student2</id>
+      <name>Tahniat</name>
+    </developer>
+  </developers>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -28,7 +39,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair3.LeapYears</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair3.IsLeapYears</mainClass>
             </manifest>
           </archive>
         </configuration>

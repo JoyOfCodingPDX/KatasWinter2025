@@ -16,10 +16,10 @@ If you are not able to push to this repository, please DM your GitHub user id
 
 ABA
 HMB
-ASB
 HERE
 HERE
-VC
+HERE
+HERE
 DHG
 LT
 HERE
@@ -28,9 +28,9 @@ HERE
 HERE
 HERE
 HERE
-TDT
 HERE
-WYZ
+HERE
+HERE
 
 SAA
 VTB
@@ -46,19 +46,19 @@ MK
 MK
 Farani Nicholas Lucero
 NEM -> Nathan Metens
-TAP
 HERE
 HERE
-
 HERE
 
+HERE
+SIA
 
 HERE
 
 ### Didn't find your initials?  No problem.  Replace one of these instead.
 
 AAB HERE // Ahmed Al-Badri
-BBB
+HERE //Teresa LaBolle
 CCC
 DDD
 EEE

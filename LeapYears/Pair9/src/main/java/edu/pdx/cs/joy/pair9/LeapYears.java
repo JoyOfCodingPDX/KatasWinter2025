@@ -14,4 +14,27 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public boolean yearDivisibleByFour(int year){
+    return year%4==0;
+  }
+
+  public boolean yearDivisibleByFourHundred(int year){
+    return year%400==0;
+  }
+
+  public boolean yearDivisibleByHundred(int year){
+    return year%100==0;
+  }
+  public boolean isLeapYear(int year){
+    if(year<0)return false;
+    if (yearDivisibleByFourHundred(year)) {
+      return true;
+    } else if (yearDivisibleByHundred(year)) {
+      return false;
+    } else if (yearDivisibleByFour(year)) {
+      return true;
+    }
+    return false;
+  }
 }
