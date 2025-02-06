@@ -24,4 +24,12 @@ public class LagsTest
     lagsList.add(new Lags(1, 2, 3));
   }
 
+  @Test
+  void canCompareLags(){
+
+    Lags lag1 = new Lags(1, 2, 3);
+    Lags lag2 = new Lags(3, 5, 2);
+    
+  }
+
 }
