@@ -2,6 +2,9 @@ package edu.pdx.cs.joy.pair16;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * A class for getting started with a code kata
  *
@@ -42,15 +45,15 @@ public class Lags {
   @VisibleForTesting
   public static void main(String[] args) {
     //System.err.println("Missing command line arguments");
-    Companies AF514 = new Companies(0, 5, 10);
-    Companies C05 = new Companies(3, 7, 14);
-    Companies AF515 = new Companies(5, 9, 7);
-    Companies BA01 = new Companies(6, 9, 8);
+    int maxPay = 0;
+    ArrayList<Companies> listOfCompanies= new ArrayList<Companies>();
+    listOfCompanies.add(new Companies(0, 5, 10));
+    listOfCompanies.add(new Companies(3, 7, 14));
+    listOfCompanies.add(new Companies(5, 9, 7));
+    listOfCompanies.add(new Companies(6, 9, 8));
 
-
-
-    for (int i = 0; i < 4; i++) {
-
+    for (Companies companies : listOfCompanies) {
+      
     }
 
 
