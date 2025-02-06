@@ -2,6 +2,10 @@ package edu.pdx.cs.joy.pair8;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * A class for getting started with a code kata
  *
@@ -9,9 +13,17 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Lags {
+  public static  List<Requests> requests = new ArrayList<>();
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+      Requests testReq = new Requests("Test1", 1, 2,3);
+        Requests testReq2 = new Requests("Test2", 4, 3,5);
+        requests.add(testReq);
+        requests.add(testReq2)
+
+
   }
+
+
 }
