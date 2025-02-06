@@ -26,6 +26,10 @@ public class Lags {
         this.price = price;
     }
 
+    public boolean compareLags(Lags other) {
+        return ((this.startTime + this.duration) < other.startTime);
+    }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");

@@ -12,11 +12,30 @@ public class Lags {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    String[] requests = {"AF514 0 5 10","CO5 3 7 14","AF515 5 9 7","BA01 6 9 8"};
+    String[] bestCombo = lags(requests);
+    System.out.println(bestCombo[0]);
   }
 
-    public String lags(String[] requests){
-      
-      
+    public static String[] lags(String[] requests){
+      String[] bestCombo = {};
+
+      for (int i = 0; i < requests.length; i++){
+        String[] data = requests[i].split(" ");
+        System.out.println(data[0] + data[1] + data[2]);
+
+        int curr = Integer.parseInt(data[1])+Integer.parseInt(data[2]);
+        int currValue = Integer.parseInt(data[3]);
+        for (int j = i;j<requests.length;j++){
+
+          String[] nextData = requests[i].split(" ");
+          int nextStart = Integer.parseInt(data[1]);
+          if (curr <= nextStart){
+            int next = Integer.parseInt(nextData[1])+Integer.parseInt(nextData[2]);
+          }
+        }
+      }
+
+      return bestCombo;
     }
 }

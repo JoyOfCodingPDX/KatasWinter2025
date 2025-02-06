@@ -1,5 +1,7 @@
 package edu.pdx.cs.joy.pair8;
 
+import java.util.List;
+
 public class Requests {
 
     // attributes
