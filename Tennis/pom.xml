@@ -28,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob.Tennis</mainClass>
             </manifest>
           </archive>
         </configuration>
