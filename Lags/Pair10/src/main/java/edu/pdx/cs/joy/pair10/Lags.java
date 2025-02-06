@@ -24,6 +24,16 @@ public class Lags {
         String[] data = requests[i].split(" ");
         System.out.println(data[0] + data[1] + data[2]);
 
+        int curr = Integer.parseInt(data[1])+Integer.parseInt(data[2]);
+        int currValue = Integer.parseInt(data[3]);
+        for (int j = i;j<requests.length;j++){
+
+          String[] nextData = requests[i].split(" ");
+          int nextStart = Integer.parseInt(data[1]);
+          if (curr <= nextStart){
+            int next = Integer.parseInt(nextData[1])+Integer.parseInt(nextData[2]);
+          }
+        }
       }
 
       return bestCombo;
