@@ -52,9 +52,31 @@ public class Lags {
     listOfCompanies.add(new Companies(5, 9, 7));
     listOfCompanies.add(new Companies(6, 9, 8));
 
-    for (Companies companies : listOfCompanies) {
 
+    int hold = 0;
+    int comp1 = 0;
+    int comp2 = 0;
+    Companies target_comp = null;
+    Companies inner_comp = null;
+    int curr_pay = 0;
+    int largest_pay = 0;
+
+    for (int i = 0; i < 4; i++)
+    {
+        System.out.println("Company" + i);
+        target_comp = listOfCompanies.get(i);
+        for (int j = 0; j < 4; j++) {
+           inner_comp = listOfCompanies.get(j);
+           if (target_comp.endTime() <= inner_comp.getStart()){
+               curr_pay = target_comp.getPay() + inner_comp.getPay();
+               if (target_comp.getPay() + inner_comp.getPay() > largest_pay)
+                   largest_pay = target_comp.getPay() + inner_comp.getPay();
+           }
+
+        }
     }
+
+    System.out.println("Largest Pay: " + largest_pay);
 
 
 
