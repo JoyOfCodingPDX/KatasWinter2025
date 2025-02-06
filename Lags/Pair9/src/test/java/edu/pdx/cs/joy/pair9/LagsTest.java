@@ -1,12 +1,11 @@
 package edu.pdx.cs.joy.pair9;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class LagsTest
 {
@@ -62,5 +61,16 @@ public class LagsTest
     );
     Lags lags = new Lags();
     assertEquals(60, lags.findMaxProfit(requests));  // Expected: 10+20+30=60
+  }
+
+  @Test
+  void testAllOverlappingRequests() {
+      List<FlightRequest> requests = Arrays.asList(
+          new FlightRequest("FL1", 0, 5, 10),
+          new FlightRequest("FL2", 1, 5, 20),
+          new FlightRequest("FL3", 2, 5, 30)
+      );
+      Lags lags = new Lags();
+      assertEquals(30, lags.findMaxProfit(requests));  // Expected: Pick highest price
   }
 }
