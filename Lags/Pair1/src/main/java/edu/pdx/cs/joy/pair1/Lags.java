@@ -28,9 +28,21 @@ public class Lags {
 
   @VisibleForTesting
   public static int maxWeight(int index, List<Integer> start, List<Integer> length, List<Integer> weight){
-
-
-    return 1;
+    if (start.size() == index+1){
+      return weight.get(index);
+    }
+    int current;
+    if(nextElement(start, length, index) == -1){
+      current = weight.get(index);
+    } else{
+      current = weight.get(index) + maxWeight(nextElement(start, length, index), start, length, weight);
+    }
+    if (current >= maxWeight(index + 1, start, length, weight)) {
+      return current;
+    }
+    else {
+      return maxWeight(index + 1, start, length, weight);
+    }
   }
 
 
@@ -47,5 +59,7 @@ public class Lags {
       length.add(Integer.parseInt(words[2]));
       weight.add(Integer.parseInt(words[3]));
     }
+    int max = maxWeight(0, start, length, weight);
+    System.out.println(max + "is the greatest weight");
   }
 }
