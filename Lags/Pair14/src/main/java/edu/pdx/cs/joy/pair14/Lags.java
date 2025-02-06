@@ -40,7 +40,22 @@ public class Lags {
     Flight flight3 = new Flight(args[8], startTime3, endTime3, price3);
     Flight flight4 = new Flight(args[12], startTime4, endTime4, price4);
 
+    Collection<Flight> flights = new ArrayList<>();
+    flights.add(flight1);
+    flights.add(flight2);
+    flights.add(flight3);
+    flights.add(flight4);
 
+    Flight lowest = null;
+    for(Flight aFlight : flights){
+      if(lowest == null){
+        lowest = aFlight;
+      }
+      if(aFlight.getStartTime() < lowest.getStartTime()){
+        lowest = aFlight;
+      }
+    }
+    System.out.println(lowest.getName());
 
   }
 }
