@@ -9,6 +9,7 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Lags {
+  public Requests;
 
   @VisibleForTesting
   public static void main(String[] args) {

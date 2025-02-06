@@ -10,6 +10,22 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Lags {
 
+    private int startTime;
+    private int duration;
+    private int price;
+
+    public Lags() {
+        this.startTime = 0;
+        this.duration = 0;
+        this.price = 0;
+    }
+
+    public Lags(int startTime, int duration, int price) {
+        this.startTime = startTime;
+        this.duration = duration;
+        this.price = price;
+    }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
