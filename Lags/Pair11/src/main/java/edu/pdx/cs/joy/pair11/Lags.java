@@ -13,25 +13,38 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Lags {
-    
-    static String ReadFile(String fileNameOrPath) {
-        String ABEAS = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileNameOrPath))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line); // Print each line of the file
-                ABEAS += line + "\n";
-            }
-        } catch (IOException e) {
-            String error = "Error reading the file: " + e.getMessage();
-            System.out.println(error);
-            return error;
-        }
-        return ABEAS;
-    }
+	public static class Flight {
+		String flightID;  
+		int startTime;  
+		int endTime;  
+		int price;   
 
-    @VisibleForTesting
-    public static void main(String[] args) {
-        System.err.println("Missing command line arguments");
-    }
+		// Constructor to initialize a flight object
+		public Flight(String flightID, int startTime, int duration, int price) {
+			this.flightID = flightID;
+			this.startTime = startTime;
+			this.endTime = startTime + duration;  // Compute end time
+			this.price = price;
+		}
+	}    
+	static String ReadFile(String fileNameOrPath) {
+		String ABEAS = "";
+		try (BufferedReader reader = new BufferedReader(new FileReader(fileNameOrPath))) {
+			String line;
+			while ((line = reader.readLine()) != null) {
+				System.out.println(line); // Print each line of the file
+				ABEAS += line + "\n";
+			}
+		} catch (IOException e) {
+			String error = "Error reading the file: " + e.getMessage();
+			System.out.println(error);
+			return error;
+		}
+		return ABEAS;
+	}
+
+	@VisibleForTesting
+	public static void main(String[] args) {
+		System.err.println("Missing command line arguments");
+	}
 }
