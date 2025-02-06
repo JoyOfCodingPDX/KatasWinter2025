@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair15;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -18,13 +20,19 @@ public class Lags {
       System.err.println("Missing command line arguments");}
 
     class Bid{
-
+      String name;
+      Integer start;
+      Integer end;
+      Integer value;
     }
+
+    ArrayList<String> input = new ArrayList<String>(List.of(args));
+    ArrayList<Bid> bids = new ArrayList<Bid>();
 
     Stack<Integer> solutionQueue = new Stack<>();
 
     // name start end $$
-    for (String arg : args){
+    for (int i = 0; i < input.size(); i += 4){
 
     }
   }
