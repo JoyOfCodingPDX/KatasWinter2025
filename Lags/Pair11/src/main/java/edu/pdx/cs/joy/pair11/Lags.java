@@ -15,7 +15,7 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Lags {
 
-    private Vector<Flight> flights;
+    private Vector<Lags.Flight> flights;
 
     public Lags() {
         flights = new Vector<>();
