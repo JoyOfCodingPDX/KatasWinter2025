@@ -14,4 +14,9 @@ public class Lags {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+    public String lags(String[] requests){
+      
+      
+    }
 }
