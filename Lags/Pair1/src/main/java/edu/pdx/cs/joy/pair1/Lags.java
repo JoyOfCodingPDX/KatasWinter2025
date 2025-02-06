@@ -9,6 +9,19 @@ import com.google.common.annotations.VisibleForTesting;
  *
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
+ *
+ *
+ *
+ * Objectives:
+ * 1. find all possible combinations
+ * 2. total and store those
+ * 3. compare total costs, display most expensive
+ *
+ * Test cases:
+ * 1. Create one with the name, start time, duration, price and
+ * (calculated end time) retrieve with GET function
+ * 2. ????
+ *
  */
 public class Lags {
   @VisibleForTesting
@@ -62,4 +75,6 @@ public class Lags {
     int max = maxWeight(0, start, length, weight);
     System.out.println(max + "is the greatest weight");
   }
+
+
 }

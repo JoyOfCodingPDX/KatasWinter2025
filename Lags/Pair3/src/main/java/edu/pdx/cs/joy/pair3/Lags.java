@@ -6,7 +6,8 @@ import com.google.common.annotations.VisibleForTesting;
 
 /**
  * A class for getting started with a code kata
- *
+ * @author Akira Smedley
+ * @author Satvik Mudgal
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
