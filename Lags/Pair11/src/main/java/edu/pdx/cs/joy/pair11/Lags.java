@@ -1,4 +1,5 @@
 package edu.pdx.cs.joy.pair11;
+import java.util.List;
 import java.util.Vector;
 
 // Following imports used for file reading (README):
@@ -15,13 +16,17 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Lags {
 
-    private Vector<Lags.Flight> flights;
+    Vector<Lags.Flight> flights;
 
     public Lags() {
         flights = new Vector<>();
     }
 
-	public class Flight {
+	public static int getMaxProfit(List<Flight> flights) {
+		return 0;
+	}
+
+	public static class Flight {
 		private String flightID;  
 		private int startTime;  
 		private int endTime;  

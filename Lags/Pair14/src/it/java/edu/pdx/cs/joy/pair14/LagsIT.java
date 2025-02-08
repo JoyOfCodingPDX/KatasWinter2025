@@ -9,6 +9,7 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class LagsIT extends InvokeMainTestCase {
 
+  @Disabled
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class);

@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair1;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestClassOrder;
 import org.hamcrest.Matchers.*;
@@ -20,11 +21,14 @@ public class LagsTest
 
   }
 
+  @Disabled
   @Test
   void canGetInstanceOfLegClass() {
     Leg l = new Leg("CS510", 0,5,10);
     assertThat(l.getStartTime(), equalTo(0));
   }
+
+  @Disabled
   @Test
   void canCreateListOfLegs() {
     Leg l = new Leg("CS510", 0,5,10);

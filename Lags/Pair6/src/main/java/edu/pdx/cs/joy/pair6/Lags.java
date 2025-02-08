@@ -44,6 +44,8 @@ public class Lags {
                 }
             }
         }
+
+        return null;
     }
 
   @VisibleForTesting

@@ -42,7 +42,7 @@ public class Lags {
     Integer end = 0;
 
     // name start end $$
-    for (int i = 0; i < args.size(); i += 4){
+    for (int i = 0; i < args.length; i += 4){
       bids.add(new Bid(
               args[i],
               Integer.valueOf(args[i]+1),
