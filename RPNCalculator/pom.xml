@@ -13,5 +13,6 @@
   <description>The RPN Calculator Katas</description>
   <modules>
     <module>Mob1</module>
+    <module>Mob2</module>
   </modules>
 </project>
