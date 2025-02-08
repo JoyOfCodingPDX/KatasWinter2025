@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair3;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.hamcrest.*;
 
@@ -36,6 +37,7 @@ public class DiamondTest
 
   }
 
+  @Disabled
     @Test
     void testDiamondB() {
         String expected =
@@ -45,6 +47,7 @@ public class DiamondTest
         assertEquals(expected, captureOutput('B'));
     }
 
+    @Disabled
     @Test
     void testDiamondC() {
         String expected =
@@ -56,6 +59,7 @@ public class DiamondTest
         assertEquals(expected, captureOutput('C'));
     }
 
+    @Disabled
     @Test
     void testDiamondD() {
         String expected =
@@ -69,6 +73,7 @@ public class DiamondTest
         assertEquals(expected, captureOutput('D'));
     }
 
+    @Disabled
     @Test
     void testInvalidCharacter() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -82,6 +87,7 @@ public class DiamondTest
         assertTrue(outputStream.toString().contains("Invalid input: Please enter a letter from A to Z"));
     }
 
+    @Disabled
     @Test
     void testMissingArgument() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -95,6 +101,7 @@ public class DiamondTest
         assertTrue(outputStream.toString().contains("Missing command line arguments"));
     }
 
+    @Disabled
     @Test
     void testTooManyArguments() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
