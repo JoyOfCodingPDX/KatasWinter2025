@@ -1,9 +1,8 @@
 package edu.pdx.cs.joy.pair4;
 
-import com.google.common.annotations.VisibleForTesting;
+import java.util.List;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.google.common.annotations.VisibleForTesting;
 
 /**
  * A class for getting started with a code kata
@@ -12,8 +11,8 @@ import java.util.Arrays;
  * class (and its tests).
  */
 public class Diamond {
-  static ArrayList<String> alpha = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
-      "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"));
+  static List<String> alpha = List.of("A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+      "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
 
   private static void printSingleCharRow(int index) {
     System.out.println(" ".repeat(index) + alpha.get(0));
