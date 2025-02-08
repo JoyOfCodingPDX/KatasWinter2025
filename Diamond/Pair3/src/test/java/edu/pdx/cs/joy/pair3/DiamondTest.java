@@ -1,22 +1,16 @@
 package edu.pdx.cs.joy.pair3;
 
 import org.junit.jupiter.api.Test;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import org.hamcrest.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
->>>>>>> db31d1dc6e9eab026896cfa149d115d73b596d9f
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DiamondTest
 {
-=======
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import static org.junit.jupiter.api.Assertions.*;
-
-public class DiamondTest {
 
     @Test
     void canInstantiateDiamondClass() {
@@ -33,7 +27,6 @@ public class DiamondTest {
         System.setOut(originalOut);
         return outputStream.toString().trim();
     }
->>>>>>> 0c844f3 (Implemented diamond)
 
   @Test
   void diamondtest() {
@@ -43,9 +36,6 @@ public class DiamondTest {
 
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     @Test
     void testDiamondB() {
         String expected =
@@ -117,9 +107,7 @@ public class DiamondTest {
         System.setErr(originalErr);
         assertTrue(outputStream.toString().contains("Too many arguments. Please provide a single letter."));
     }
->>>>>>> 0c844f3 (Implemented diamond)
-}
-=======
+
   @Test
   void diamondtest2() {
     String myString = "X   X";
@@ -132,4 +120,3 @@ public class DiamondTest {
     Diamond.print_dimond('A');
   }
 }
->>>>>>> db31d1dc6e9eab026896cfa149d115d73b596d9f
