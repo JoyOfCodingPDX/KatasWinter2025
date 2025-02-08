@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair1;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestClassOrder;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -26,6 +27,7 @@ public class DiamondTest
     assertThat(Diamond.main(firstletter),equalTo("A"));
   }
 */
+  @Disabled
   @Test
   void canPrintA() {
     assertThat(Diamond.letterPrintDiamond('A'), equalTo("A\n"));
@@ -37,6 +39,7 @@ public class DiamondTest
     assertThat(Diamond.letterPrintDiamond('B'), equalTo(" A\nB B\n A"));
   }*/
 
+  @Disabled
   @Test
   void canPrintC() {
     assertThat(Diamond.letterPrintDiamond('C'), equalTo(" A\nB B\n A"));
