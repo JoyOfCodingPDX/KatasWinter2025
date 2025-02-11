@@ -3,7 +3,6 @@ package com.gildedrose;
 class GildedRose {
     static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
     static final String AGED_BRIE = "Aged Brie";
-    static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -12,7 +11,8 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (item.name.equals(SULFURAS)) {
+            if (item instanceof Sulfuras) {
+                ((Sulfuras) item).updateQuality();
                 continue;
             }
 
