@@ -13,13 +13,10 @@ public class BackstagePass extends UpdatableItem {
       incrementQuality();
 
     } else if (sellIn > 5) {
-      incrementQuality();
-      incrementQuality();
+      incrementQuality(2);
 
     } else if (sellIn > 0) {
-      incrementQuality();
-      incrementQuality();
-      incrementQuality();
+      incrementQuality(3);
 
     } else {
       this.quality = 0;
@@ -27,4 +24,11 @@ public class BackstagePass extends UpdatableItem {
 
     this.sellIn--;
   }
+
+  private void incrementQuality(int i) {
+    for (int j = 0; j < i; j++) {
+      incrementQuality();
+    }
+  }
+
 }
