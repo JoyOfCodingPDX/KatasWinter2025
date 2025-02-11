@@ -11,8 +11,8 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (item instanceof Sulfuras) {
-                ((Sulfuras) item).updateQuality();
+            if (item instanceof UpdatableItem) {
+                ((UpdatableItem) item).updateQuality();
                 continue;
             }
 
