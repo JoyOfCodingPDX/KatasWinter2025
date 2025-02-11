@@ -6,4 +6,10 @@ public abstract class UpdatableItem extends Item {
   }
 
   public abstract void updateQuality();
+
+  protected void incrementQuality() {
+    if (this.quality < 50) {
+      this.quality++;
+    }
+  }
 }

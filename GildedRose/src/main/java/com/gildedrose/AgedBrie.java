@@ -19,9 +19,4 @@ public class AgedBrie extends UpdatableItem {
 
   }
 
-  private void incrementQuality() {
-    if (this.quality < 50) {
-      this.quality++;
-    }
-  }
 }
