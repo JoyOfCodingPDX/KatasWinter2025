@@ -14,11 +14,13 @@ public class Tennis {
   String[] scoreNames = {"Love", "Fifteen", "Thirty", "Forty", "Advantage: "};
 
   public String getScore() {
+    //If players have both scored 3 and are equal
     if (player1Score >= 3 && player2Score >= 3) {
-      if (pl) {
+      if (player1Score == player2Score) {
         return "Deuce";
       }
     }
+
     if (player1Score == 4 && player2Score == 3) {
       return scoreNames[player1Score] + "Player One";
     }
