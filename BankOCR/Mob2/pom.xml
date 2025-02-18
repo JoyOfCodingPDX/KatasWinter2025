@@ -6,7 +6,7 @@
     <artifactId>BankOCRKatas</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.mob1</groupId>
+  <groupId>edu.pdx.cs.joy.mob2</groupId>
   <artifactId>BankOCR</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
