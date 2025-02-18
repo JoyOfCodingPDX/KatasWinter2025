@@ -18,8 +18,9 @@ public class Tennis {
       return "Deuce";
     }
     if (player1Score == 4 && player2Score == 3) {
-      return scoreNames[player2Score] + "Player 2";
+      return scoreNames[player1Score] + "Player One";
     }
+
     return scoreNames[player1Score] + "-" + scoreNames[player2Score];
   }
 
