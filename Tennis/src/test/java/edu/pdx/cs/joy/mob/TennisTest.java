@@ -21,4 +21,11 @@ public class TennisTest
     assertThat(tennis.getScore(), equalTo("Fifteen-Love"));
   }
 
+  @Test
+  void playerTwoScoresOnce() {
+    Tennis tennis = new Tennis();
+    tennis.playerTwoScores();
+    assertThat(tennis.getScore(), equalTo("Love-Fifteen"));
+  }
+
 }
