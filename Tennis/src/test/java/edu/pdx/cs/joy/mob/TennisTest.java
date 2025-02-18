@@ -28,4 +28,29 @@ public class TennisTest
     assertThat(tennis.getScore(), equalTo("Love-Fifteen"));
   }
 
+  @Test
+  void bothPlayersAtDeuce() {
+    Tennis tennis = new Tennis();
+    tennis.playerOneScores();
+    tennis.playerOneScores();
+    tennis.playerOneScores();
+    tennis.playerTwoScores();
+    tennis.playerTwoScores();
+    tennis.playerTwoScores();
+    assertThat(tennis.getScore(), equalTo("Deuce"));
+  }
+
+  @Test
+  void playerOneHadAdvantage {
+    Tennis tennis = new Tennis();
+  tennis.playerOneScores();
+  tennis.playerOneScores();
+  tennis.playerOneScores();
+  tennis.playerOneScores();
+  tennis.playerTwoScores();
+  tennis.playerTwoScores();
+  tennis.playerTwoScores();
+
+}
+
 }
