@@ -11,7 +11,7 @@ public class TennisTest
 
   private Tennis tennis;
 
-   @BeforeEach
+  @BeforeEach
   void setUp() {
     tennis = new Tennis();
   }
@@ -22,7 +22,7 @@ public class TennisTest
     }
   }
 
-  private static void playerTwoScores(Tennis tennis, int scores) {
+  private void playerTwoScores( int scores) {
     for (int i = 0; i < scores; i++) {
       tennis.playerTwoScores();
     }
@@ -44,24 +44,21 @@ public class TennisTest
 
   @Test
   void playerTwoScoresOnce() {
-    Tennis tennis = new Tennis();
     tennis.playerTwoScores();
     assertThat(tennis.getScore(), equalTo("Love-Fifteen"));
   }
 
   @Test
   void bothPlayersAtDeuce() {
-    Tennis tennis = new Tennis();
     playerOneScores(3);
-    playerTwoScores(tennis, 3);
+    playerTwoScores(3);
     assertThat(tennis.getScore(), equalTo("Deuce"));
   }
 
   @Test
   void playerOneHadAdvantage() {
-    Tennis tennis = new Tennis();
     playerOneScores(4);
-    playerTwoScores(tennis, 3);
+    playerTwoScores( 3);
     assertThat(tennis.getScore(), equalTo("Advantage: Player One"));
 }
 
@@ -69,9 +66,8 @@ public class TennisTest
 
   @Test
   void bothPlayersAtDeuceFourFour() {
-    Tennis tennis = new Tennis();
     playerOneScores(4);
-    playerTwoScores(tennis, 4);
+    playerTwoScores( 4);
     assertThat(tennis.getScore(), equalTo("Deuce"));
 
   }
