@@ -26,6 +26,7 @@ accordingly
     <module>Lags</module>
     <module>Tennis</module>
     <module>RPNCalculator</module>
+    <module>BankOCR</module>
   </modules>
   <inceptionYear>2025</inceptionYear>
   <organization>
