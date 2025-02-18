@@ -41,15 +41,16 @@ public class TennisTest
   }
 
   @Test
-  void playerOneHadAdvantage {
+  void playerOneHadAdvantage() {
     Tennis tennis = new Tennis();
-  tennis.playerOneScores();
-  tennis.playerOneScores();
-  tennis.playerOneScores();
-  tennis.playerOneScores();
-  tennis.playerTwoScores();
-  tennis.playerTwoScores();
-  tennis.playerTwoScores();
+    tennis.playerOneScores();
+    tennis.playerOneScores();
+    tennis.playerOneScores();
+    tennis.playerOneScores();
+    tennis.playerTwoScores();
+    tennis.playerTwoScores();
+    tennis.playerTwoScores();
+    assertThat(tennis.getScore(), equalTo("Advantage: Player One"));
 
 }
 
