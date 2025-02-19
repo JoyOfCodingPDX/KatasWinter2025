@@ -25,6 +25,7 @@ accordingly
     <module>GildedRose</module>
     <module>Lags</module>
     <module>Tennis</module>
+    <module>RPNCalculator</module>
   </modules>
   <inceptionYear>2025</inceptionYear>
   <organization>
