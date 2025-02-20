@@ -10,11 +10,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 
-public class RPNCalculatorTest
+public class RPNCalculatorTest extends InvokeMainTestCase
 {
   
-  private MainMethodResult invokeMain(String...args){
-    return invokeMain(RPNCalculator.class,args);
+  private MainMethodResult invokeMain(String... args){
+    return invokeMain(RPNCalculator.class, args);
   }
   
 
@@ -22,12 +22,46 @@ public class RPNCalculatorTest
   void canInstantiateKataClass() {
     new RPNCalculator();
   }
-  /* 
+  
   @Test
-  void baseCase(){
+  void baseCase1(){
     MainMethodResult result = invokeMain("3","5","+");
     assertThat(result.getTextWrittenToStandardOut(),containsString("8"));
   }
-    */
+  
+  @Test
+  void baseCase2(){
+    MainMethodResult result = invokeMain("9","5","-");
+    assertThat(result.getTextWrittenToStandardOut(),containsString("4"));
+  }
 
+  @Test
+  void baseCase3(){
+    MainMethodResult result = invokeMain("3","5","*");
+    assertThat(result.getTextWrittenToStandardOut(),containsString("15"));
+  }
+
+  @Test
+  void baseCase4(){
+    MainMethodResult result = invokeMain("15","5","/");
+    assertThat(result.getTextWrittenToStandardOut(),containsString("3"));
+  }
+
+  @Test
+  void testSqrt(){
+    MainMethodResult result = invokeMain("9","SQRT");
+    assertThat(result.getTextWrittenToStandardOut(),containsString("3"));
+  }
+
+  @Test
+  void testSqrt2(){
+    MainMethodResult result = invokeMain("10","SQRT");
+    assertThat(result.getTextWrittenToStandardOut(),containsString("3"));
+  }
+
+  @Test
+  void multipleTest(){
+    MainMethodResult result = invokeMain("9","SQRT", "10", "+");
+    assertThat(result.getTextWrittenToStandardOut(),containsString("13"));
+  }
 }
