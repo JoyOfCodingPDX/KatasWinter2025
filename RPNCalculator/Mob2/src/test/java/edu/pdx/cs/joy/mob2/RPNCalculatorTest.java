@@ -64,4 +64,10 @@ public class RPNCalculatorTest extends InvokeMainTestCase
     MainMethodResult result = invokeMain("9","SQRT", "10", "+");
     assertThat(result.getTextWrittenToStandardOut(),containsString("13"));
   }
+
+  @Test
+  void multipleTest2(){
+    MainMethodResult result = invokeMain("3" , "5","8","*","7","+","*");
+    assertThat(result.getTextWrittenToStandardOut(),containsString("141"));
+  }
 }
