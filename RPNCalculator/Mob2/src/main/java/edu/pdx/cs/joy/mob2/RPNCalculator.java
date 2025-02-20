@@ -1,5 +1,8 @@
 package edu.pdx.cs.joy.mob2;
 import java.util.Stack;
+import java.util.EmptyStackException;
+import java.util.Stack.*;
+import java.util.*;
 import java.lang.Math;
 import com.google.common.annotations.VisibleForTesting;
 
@@ -26,8 +29,10 @@ public class RPNCalculator {
     int val1;
     int val2;
     double sqrtResult;
+    //int max = 0;
     
     for (int i = 0; i < args.length; i++) {
+
       try {
         stackElement = Integer.parseInt(args[i]);
         numStack.push(stackElement);
@@ -63,6 +68,14 @@ public class RPNCalculator {
             sqrtResult = Math.sqrt(val1);
             int result = (int)sqrtResult;
             numStack.push(result);
+
+            /*
+          case "MAX":
+            int[] nums = {};
+            while (max!=0){
+
+            }
+             */
         }
       }
     } 
