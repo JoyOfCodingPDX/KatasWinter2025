@@ -88,4 +88,27 @@ public class RPNCalculatorTest
     calculator.main(args);
     assertThat(baos.toString(), containsString("141"));
   }
+
+  @Test
+  void squareRootTest(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"9", "SQRT"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("3"));
+  }
+
+  @Test
+  void MaxTest(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"5", "3", "4", "2", "9", "1", "MAX"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("9"));
+  }
+
+
+
 }
