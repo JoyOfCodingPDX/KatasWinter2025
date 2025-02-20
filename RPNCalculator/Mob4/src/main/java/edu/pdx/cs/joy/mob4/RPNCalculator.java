@@ -47,10 +47,21 @@ public class RPNCalculator {
       } else if (currArg.equals("SQRT")) {
         var1 = Double.parseDouble(stack.pop());
         result = Math.sqrt(var1);
-      } else {
+        stack.push(Double.toString(result));
+      } else if(currArg.equals("MAX")){
+        double maxValue = 0.0;
+        for(int i=0;i< stack.size();i++){
+          var1 = Double.parseDouble(stack.pop());
+          if(var1 > maxValue){
+            maxValue = var1;
+          }
+        }
+        result = maxValue;
+        stack.push(Double.toString(result));
+      }
+      else {
         stack.push(currArg);
       }
-
     }
     System.out.println(result);
 
