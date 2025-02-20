@@ -29,11 +29,11 @@ public class RPNCalculatorTest
   @Test
   void testForTwoStrings() {
     RPNCalculator rcal = new RPNCalculator();
-    IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+      RuntimeException thrown = assertThrows(RuntimeException.class, () -> {
       rcal.parseOperators("1 2");
     });
 
-    assertEquals("stack empty", thrown.getMessage());
+    assertEquals("Parse is runned with no operators", thrown.getMessage());
   }
   @Test
   void testAddition() {
