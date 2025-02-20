@@ -18,14 +18,14 @@ public class RPNCalculatorTest
   @Test
   void testForEmptyString(){
     RPNCalculator rcal = new RPNCalculator();
-    int value = rcal.parseOperators("");
+    double value = rcal.parseOperators("");
     assertEquals(value,0);
   }
 
   @Test
   void testForASingleString(){
     RPNCalculator rcal = new RPNCalculator();
-    int value = rcal.parseOperators("1");
+    double value = rcal.parseOperators("1");
     assertEquals(value,1);
   }
 
