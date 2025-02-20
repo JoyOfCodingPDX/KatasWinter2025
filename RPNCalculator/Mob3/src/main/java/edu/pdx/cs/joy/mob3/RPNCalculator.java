@@ -1,8 +1,8 @@
 package edu.pdx.cs.joy.mob3;
 
-import com.google.common.annotations.VisibleForTesting;
-
 import java.util.Stack;
+
+import com.google.common.annotations.VisibleForTesting;
 
 /**
  * A class for getting started with a code kata
@@ -20,19 +20,30 @@ public class RPNCalculator {
   @VisibleForTesting
   public static double evaluateRPN(String[] expression) {
     Stack<Double> stack = new Stack<>();
+    double val1 = 0, val2 = 0;
     for(int i = 0; i < expression.length; i++) {
       switch(expression[i]) {
         case "+":
           if(stack.isEmpty()) {
             throw new IllegalArgumentException("stack empty");
           }
-          double val1 = stack.pop();
+          val1 = stack.pop();
           if(stack.isEmpty()) {
             throw new IllegalArgumentException("stack empty");
           }
-          double val2 = stack.pop();
+          val2 = stack.pop();
           stack.push(val1 + val2);
-        case "-":break;
+        case "-":
+          if(stack.isEmpty()) {
+            throw new IllegalArgumentException("stack empty");
+          }
+         val1 = stack.pop();
+          if(stack.isEmpty()) {
+            throw new IllegalArgumentException("stack empty");
+          }
+          val2 = stack.pop();
+          stack.push(val2 - val1);
+          break;
         case "*":break;
         case "/":break;
         default:

@@ -80,12 +80,12 @@ public class RPNCalculatorTest
   }
 
   @Test
-  void canDoThreeNumbersInARow(){
+  void canDoFourNumbersInARow(){
     System.setOut(new PrintStream(baos));
 
-    String[] args = {};
+    String[] args = {"3", "5", "8", "*", "7", "+", "*"};
     RPNCalculator calculator = new RPNCalculator();
     calculator.main(args);
-    assertThat(baos.toString(), containsString("3"));
+    assertThat(baos.toString(), containsString("141"));
   }
 }
