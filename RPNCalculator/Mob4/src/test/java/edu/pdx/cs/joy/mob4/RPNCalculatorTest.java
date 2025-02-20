@@ -38,5 +38,54 @@ public class RPNCalculatorTest
   }
 
   @Test
-  void
+  void canMultTwoNumbers(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"5", "3", "*"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("15"));
+
+  }
+
+  @Test
+  void canDivideTwoNumbers(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"20", "4", "/"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("5"));
+
+  }
+
+  @Test
+  void canAddThreeNumbers(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"2", "3", "+", "4", "+"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("9"));
+  }
+
+  @Test
+  void canDoSampleNumbers(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"4", "2", "+", "3", "-"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("3"));
+  }
+
+  @Test
+  void canDoThreeNumbersInARow(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("3"));
+  }
 }

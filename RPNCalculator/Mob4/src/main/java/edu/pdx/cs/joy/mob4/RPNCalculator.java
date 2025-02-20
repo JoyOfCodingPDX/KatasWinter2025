@@ -31,6 +31,18 @@ public class RPNCalculator {
         result = var2 - var1;
         stack.push(Integer.toString(result));
       }
+      else if (currArg.equals("*")) {
+        int var1 = Integer.parseInt(stack.pop());
+        int var2 = Integer.parseInt(stack.pop());
+        result = var2 * var1;
+        stack.push(Integer.toString(result));
+      }
+      else if (currArg.equals("/")) {
+        int var1 = Integer.parseInt(stack.pop());
+        int var2 = Integer.parseInt(stack.pop());
+        result = var2 / var1;
+        stack.push(Integer.toString(result));
+      }
       else {
         stack.push(currArg);
       }

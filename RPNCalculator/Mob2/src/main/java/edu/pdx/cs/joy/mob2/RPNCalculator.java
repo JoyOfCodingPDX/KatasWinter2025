@@ -23,6 +23,8 @@ public class RPNCalculator {
     int stackElement = 0;
     int operatorResult;
     String operator = "";
+    int val1;
+    int val2;
     for (int i = 0; i < args.length; i++) {
       try {
         stackElement = Integer.parseInt(args[i]);
@@ -30,10 +32,15 @@ public class RPNCalculator {
       } catch (NumberFormatException e) {
         operator = args[i];
         switch (operator) {
-          case '+':
-            stack.pop()
+          case "+":
+            val1 = numStack.pop();
+            val2 = numStack.pop();
+            numStack.push(val1+val2);
+            break;
+            
         }
       }
-    }
+    } 
+    System.out.println("final resutl: " + numStack.pop());
   }
 }
