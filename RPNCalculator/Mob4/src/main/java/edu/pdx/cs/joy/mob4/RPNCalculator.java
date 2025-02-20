@@ -17,33 +17,37 @@ public class RPNCalculator {
   @VisibleForTesting
   public static void main(String[] args) {
     Stack<String> stack = new Stack<>();
-    int result = 0;
+    Double result = 0.0;
+    Double var1 = 0.0;
+    Double var2 = 0.0;
     for (String currArg : args) {
       if (currArg.equals("+")) {
-        int var1 = Integer.parseInt(stack.pop());
-        int var2 = Integer.parseInt(stack.pop());
+        var1 = Double.parseDouble(stack.pop());
+        var2 = Double.parseDouble(stack.pop());
         result = var1 + var2;
-        stack.push(Integer.toString(result));
+        stack.push(Double.toString(result));
       }
       else if (currArg.equals("-")) {
-        int var1 = Integer.parseInt(stack.pop());
-        int var2 = Integer.parseInt(stack.pop());
+        var1 = Double.parseDouble(stack.pop());
+        var2 = Double.parseDouble(stack.pop());
         result = var2 - var1;
-        stack.push(Integer.toString(result));
+        stack.push(Double.toString(result));
       }
       else if (currArg.equals("*")) {
-        int var1 = Integer.parseInt(stack.pop());
-        int var2 = Integer.parseInt(stack.pop());
+        var1 = Double.parseDouble(stack.pop());
+        var2 = Double.parseDouble(stack.pop());
         result = var2 * var1;
-        stack.push(Integer.toString(result));
+        stack.push(Double.toString(result));
       }
       else if (currArg.equals("/")) {
-        int var1 = Integer.parseInt(stack.pop());
-        int var2 = Integer.parseInt(stack.pop());
+        var1 = Double.parseDouble(stack.pop());
+        var2 = Double.parseDouble(stack.pop());
         result = var2 / var1;
-        stack.push(Integer.toString(result));
-      }
-      else {
+        stack.push(Double.toString(result));
+      } else if (currArg.equals("SQRT")) {
+        var1 = Double.parseDouble(stack.pop());
+        result = Math.sqrt(var1);
+      } else {
         stack.push(currArg);
       }
 
