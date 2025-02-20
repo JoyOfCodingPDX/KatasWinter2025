@@ -17,7 +17,7 @@ public class RPNCalculator {
     
   @VisibleForTesting
   public static void main(String[] args) {
-    Stack<Integer> stack = new Stack();
+    Stack<Integer> stack = new Stack<>();
 
     // for loop in the iterates from left to right
     for (int i = 0; i < args.length; i++) {
