@@ -23,6 +23,8 @@ public class RPNCalculator {
     double val1 = 0, val2 = 0;
     for(int i = 0; i < expression.length; i++) {
       switch(expression[i]) {
+        case "MAX":
+          break;
         case "+":
           if(stack.isEmpty()) {
             throw new IllegalArgumentException("stack empty");
