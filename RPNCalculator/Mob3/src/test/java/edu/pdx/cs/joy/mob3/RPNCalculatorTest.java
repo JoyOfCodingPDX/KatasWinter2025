@@ -30,12 +30,14 @@ public class RPNCalculatorTest
   }
 
   @Test
-  void testForTwoStrings(){
+  void testForTwoStrings() {
     RPNCalculator rcal = new RPNCalculator();
-    int value = rcal.parseOperators("1 2");
-    assertThrows(IllegalArgumentException.class, "bad argument");
+    IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+      rcal.parseOperators("1 2");
+    });
+
+    assertEquals("bad argument", thrown.getMessage());
   }
-  
   @Test
   void testAddition() {
     assertEquals(5, RPNCalculator.parseOperators("2 3 +"));
