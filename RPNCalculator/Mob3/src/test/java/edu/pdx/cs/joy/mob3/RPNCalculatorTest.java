@@ -33,7 +33,7 @@ public class RPNCalculatorTest
       rcal.parseOperators("1 2");
     });
 
-    assertEquals("bad argument", thrown.getMessage());
+    assertEquals("stack empty", thrown.getMessage());
   }
   @Test
   void testAddition() {
@@ -51,12 +51,30 @@ public class RPNCalculatorTest
   void testDivision() {
     assertEquals(2, RPNCalculator.parseOperators("6 3 /"));
   }
-  /*@Test
-  void throwException(){
-    RPNCalculator rcal = new RPNCalculator();
 
-    IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
-      rcal.parseOperators("0 2");
-  }*/
+  @Test
+  void test_divide_zero(){
+    try {
+      RPNCalculator.parseOperators("6 0 /");
+      assert(false);
+    } catch (Exception e){
+      assert(true);
+    }
+  }
+
+  @Test
+  void test_two_plus(){
+    assert(6 == RPNCalculator.parseOperators("2 2 2 + +"));
+  }
+
+  @Test
+  void test_plus_minus(){
+    assert(6 == RPNCalculator.parseOperators("6 2 2 - +"));
+  }
+
+  @Test
+  void test_times_add(){
+    assert(6 == RPNCalculator.parseOperators("2 2 2 * +"));
+  }
 
 }
