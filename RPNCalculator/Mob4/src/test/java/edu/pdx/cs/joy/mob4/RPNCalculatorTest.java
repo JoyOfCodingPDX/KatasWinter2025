@@ -109,6 +109,15 @@ public class RPNCalculatorTest
     assertThat(baos.toString(), containsString("9"));
   }
 
+  @Test
+  void MaxTestAddition(){
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"4", "5", "MAX","1", "+"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("6"));
+  }
 
 
 }

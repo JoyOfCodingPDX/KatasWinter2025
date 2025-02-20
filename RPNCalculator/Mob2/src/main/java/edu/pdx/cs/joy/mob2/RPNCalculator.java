@@ -1,6 +1,6 @@
 package edu.pdx.cs.joy.mob2;
 import java.util.Stack;
-
+import java.lang.Math;
 import com.google.common.annotations.VisibleForTesting;
 
 /*
@@ -25,6 +25,8 @@ public class RPNCalculator {
     String operator = "";
     int val1;
     int val2;
+    double sqrtResult;
+    
     for (int i = 0; i < args.length; i++) {
       try {
         stackElement = Integer.parseInt(args[i]);
@@ -37,7 +39,30 @@ public class RPNCalculator {
             val2 = numStack.pop();
             numStack.push(val1+val2);
             break;
-            
+
+          case "-":
+            val1 = numStack.pop();
+            val2 = numStack.pop();
+            numStack.push(val1-val2);
+            break;
+
+          case "*":
+            val1 = numStack.pop();
+            val2 = numStack.pop();
+            numStack.push(val1*val2);
+            break;
+
+          case "/":
+            val1 = numStack.pop();
+            val2 = numStack.pop();
+            numStack.push(val2/val1);
+            break;
+
+          case "SQRT":
+            val1 = numStack.pop();
+            sqrtResult = Math.sqrt(val1);
+            int result = (int)sqrtResult;
+            numStack.push(result);
         }
       }
     } 
