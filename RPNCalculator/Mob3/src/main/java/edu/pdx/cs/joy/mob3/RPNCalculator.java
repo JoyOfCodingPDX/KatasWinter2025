@@ -33,6 +33,7 @@ public class RPNCalculator {
           }
           val2 = stack.pop();
           stack.push(val1 + val2);
+          break;
         case "-":
           if(stack.isEmpty()) {
             throw new IllegalArgumentException("stack empty");
@@ -44,8 +45,29 @@ public class RPNCalculator {
           val2 = stack.pop();
           stack.push(val2 - val1);
           break;
-        case "*":break;
-        case "/":break;
+        case "*":
+          if(stack.isEmpty()){
+            throw new IllegalArgumentException("stack empty");
+          }
+          val1=stack.pop();
+          if(stack.isEmpty()){
+            throw new IllegalArgumentException("stack empty");
+          }
+          val2=stack.pop();
+          stack.push(val1 * val2);
+          break;
+
+        case "/":
+          if(stack.isEmpty()){
+            throw new IllegalArgumentException("stack empty");
+          }
+          val1=stack.pop();
+          if(stack.isEmpty()){
+            throw new IllegalArgumentException("stack empty");
+          }
+          val2=stack.pop();
+          stack.push(val2 / val1);
+          break;
         default:
           stack.push(Double.parseDouble(expression[i]));
       }
