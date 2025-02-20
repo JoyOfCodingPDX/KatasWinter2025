@@ -16,7 +16,6 @@ public class RPNCalculatorTest
   void testAddition() {
     assertEquals(5, RPNCalculator.parseOperators("2 3 +"));
   }
-
   @Test
   void testSubtraction(){
     assertEquals(-1, RPNCalculator.parseOperators("2 3 -"));
