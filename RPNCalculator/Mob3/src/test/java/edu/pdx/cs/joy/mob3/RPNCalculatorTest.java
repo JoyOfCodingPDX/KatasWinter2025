@@ -2,10 +2,7 @@ package edu.pdx.cs.joy.mob3;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class RPNCalculatorTest
 {
@@ -42,4 +39,24 @@ public class RPNCalculatorTest
   void testAddition() {
     assertEquals(5, RPNCalculator.parseOperators("2 3 +"));
   }
+  @Test
+  void testSubtraction(){
+    assertEquals(2, RPNCalculator.parseOperators("5 3 -"));
+  }
+  @Test
+  void testMultiplication() {
+    assertEquals(6, RPNCalculator.parseOperators("2 3 *"));
+  }
+  @Test
+  void testDivision() {
+    assertEquals(2, RPNCalculator.parseOperators("6 3 /"));
+  }
+  /*@Test
+  void throwException(){
+    RPNCalculator rcal = new RPNCalculator();
+
+    IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+      rcal.parseOperators("0 2");
+  }*/
+
 }
