@@ -25,4 +25,18 @@ public class RPNCalculatorTest
     calculator.main(args);
     assertThat(baos.toString(), containsString("7"));
   }
+
+  @Test
+  void canSubTwoNumbers() {
+    System.setOut(new PrintStream(baos));
+
+    String[] args = {"4", "3", "-"};
+    RPNCalculator calculator = new RPNCalculator();
+    calculator.main(args);
+    assertThat(baos.toString(), containsString("1"));
+
+  }
+
+  @Test
+  void
 }
