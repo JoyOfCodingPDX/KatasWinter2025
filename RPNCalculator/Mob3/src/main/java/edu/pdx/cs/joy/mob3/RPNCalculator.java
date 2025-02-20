@@ -66,6 +66,9 @@ public class RPNCalculator {
             throw new IllegalArgumentException("stack empty");
           }
           val2=stack.pop();
+          if (val1 == 0){
+            throw new RuntimeException("Divide by zero exception");
+          }
           stack.push(val2 / val1);
           break;
         default:
@@ -81,6 +84,10 @@ public class RPNCalculator {
 
   @VisibleForTesting
   public static double parseOperators(String parse){
+    if (parse.length() == 0){
+      return 0;
+    }
+
     String[] data = parse.split(" ");
     //String[] operators = {"+", "-", "*", "/"};
     return evaluateRPN(data);
