@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RPNCalculatorTest
 {
@@ -32,5 +34,10 @@ public class RPNCalculatorTest
     RPNCalculator rcal = new RPNCalculator();
     int value = rcal.parseOperators("1 2");
     assertThrows(IllegalArgumentException.class, "bad argument");
+  }
+  
+  @Test
+  void testAddition() {
+    assertEquals(5, RPNCalculator.parseOperators("2 3 +"));
   }
 }
