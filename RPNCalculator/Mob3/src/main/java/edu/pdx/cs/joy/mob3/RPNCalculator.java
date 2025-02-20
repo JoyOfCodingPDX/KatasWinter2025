@@ -25,6 +25,6 @@ public class RPNCalculator {
 
     }
 
-    return 1;
+    return 0;
   }
 }
