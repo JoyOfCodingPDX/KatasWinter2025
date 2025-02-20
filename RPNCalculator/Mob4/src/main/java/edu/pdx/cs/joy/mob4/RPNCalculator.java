@@ -17,22 +17,26 @@ public class RPNCalculator {
   @VisibleForTesting
   public static void main(String[] args) {
     Stack<String> stack = new Stack<>();
-
+    int result = 0;
     for (String currArg : args) {
       if (currArg.equals("+")) {
         int var1 = Integer.parseInt(stack.pop());
         int var2 = Integer.parseInt(stack.pop());
-        int result = var1 + var2;
+        result = var1 + var2;
         stack.push(Integer.toString(result));
       }
       else if (currArg.equals("-")) {
-
+        int var1 = Integer.parseInt(stack.pop());
+        int var2 = Integer.parseInt(stack.pop());
+        result = var2 - var1;
+        stack.push(Integer.toString(result));
       }
       else {
         stack.push(currArg);
       }
 
     }
+    System.out.println(result);
 
   }
 }
