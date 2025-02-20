@@ -19,6 +19,30 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <name>Cristian Ion</name>
+    </developer>
+    <developer>
+      <name>Wenkang</name>
+    </developer>
+    <developer>
+      <name>Akira</name>
+    </developer>
+    <developer>
+      <name>Hemu</name>
+    </developer>
+    <developer>
+      <name>Satvik</name>
+    </developer>
+    <developer>
+      <name></name>
+    </developer>
+    <developer>
+      <name></name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>

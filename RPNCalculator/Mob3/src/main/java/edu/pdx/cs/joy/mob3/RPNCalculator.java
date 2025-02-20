@@ -14,4 +14,17 @@ public class RPNCalculator {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  @VisibleForTesting
+  public static int parseOperators(String parse){
+    String[] data = parse.split(" ");
+    String[] operators = {"+", "-", "*", "/"};
+
+    int cur = 0;
+    for (; cur < data.length; cur++){
+
+    }
+
+    return 1;
+  }
 }
