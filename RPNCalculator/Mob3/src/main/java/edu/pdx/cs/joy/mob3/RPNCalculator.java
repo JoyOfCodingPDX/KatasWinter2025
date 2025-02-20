@@ -76,8 +76,11 @@ public class RPNCalculator {
       }
     }
 
-    if (stack.size() != 1) {
+    if (stack.size() == 0) {
       throw new IllegalArgumentException("stack empty");
+    }
+    if (stack.size() > 1){
+      throw new RuntimeException("Parse is runned with no operators");
     }
     return stack.pop();
   }

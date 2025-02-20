@@ -77,4 +77,14 @@ public class RPNCalculatorTest
     assert(6 == RPNCalculator.parseOperators("2 2 2 * +"));
   }
 
+  @Test
+  void test_no_operators(){
+    try {
+      RPNCalculator.parseOperators("2 2 2");
+      assert(false);
+    } catch (Exception e) {
+      assert(true);
+    }
+  }
+
 }
