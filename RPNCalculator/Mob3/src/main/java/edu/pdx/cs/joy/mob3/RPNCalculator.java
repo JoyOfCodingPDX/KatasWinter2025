@@ -18,27 +18,38 @@ public class RPNCalculator {
   }
 
   @VisibleForTesting
-  public static double evaluateRPN(String expression) {
+  public static double evaluateRPN(String[] expression) {
     Stack<Double> stack = new Stack<>();
-    String[] tokens = expression.split(" ");
-
+    for(int i = 0; i < expression.length; i++) {
+      switch(expression[i]) {
+        case "+":
+          if(stack.isEmpty()) {
+            throw new IllegalArgumentException("stack empty");
+          }
+          double val1 = stack.pop();
+          if(stack.isEmpty()) {
+            throw new IllegalArgumentException("stack empty");
+          }
+          double val2 = stack.pop();
+          stack.push(val1 + val2);
+        case "-":break;
+        case "*":break;
+        case "/":break;
+        default:
+          stack.push(Double.parseDouble(expression[i]));
+      }
+    }
 
     if (stack.size() != 1) {
-
+      throw new IllegalArgumentException("stack empty");
     }
     return stack.pop();
   }
 
   @VisibleForTesting
-  public static int parseOperators(String parse){
+  public static double parseOperators(String parse){
     String[] data = parse.split(" ");
-    String[] operators = {"+", "-", "*", "/"};
-
-    int cur = 0;
-    for (; cur < data.length; cur++){
-
-    }
-
-    return 0;
+    //String[] operators = {"+", "-", "*", "/"};
+    return evaluateRPN(data);
   }
 }
