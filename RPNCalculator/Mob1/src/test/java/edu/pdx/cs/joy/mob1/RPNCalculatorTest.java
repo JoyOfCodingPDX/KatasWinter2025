@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.mob1;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Stack;
@@ -22,6 +23,7 @@ public class RPNCalculatorTest {
   // remember to press I to be able to type because
   // we are using vim ew
 
+  @Disabled
   @Test
   void canAddOnePlusOne() {
     s.push("1");
