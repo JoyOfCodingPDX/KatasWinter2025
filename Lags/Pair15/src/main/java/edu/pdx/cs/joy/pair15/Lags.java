@@ -35,9 +35,19 @@ public class Lags {
       }
     }
 
+      class Result {
+        Integer value;
+        Integer end;
+
+        public Result(Integer value, Integer end) {
+          this.value = value;
+          this.end = end;
+        }
+      }
+
     ArrayList<Bid> bids = new ArrayList<Bid>();
 
-    Stack<Integer> solutionQueue = new Stack<>();
+    Stack<Result> solutionQueue = new Stack<>();
 
     Integer end = 0;
 
@@ -54,7 +64,23 @@ public class Lags {
 
     Integer time = 0;
 
-    
+    while (time < end) {
+      for (Bid b : bids) {
+        if (b.end == time) {
+          if (solutionQueue.empty()) {
+            solutionQueue.push(new Result(b.value, b.end));
+            continue;
+          }
+          Result top = solutionQueue.peek();
+          if (b.start >= top.end) {
+            solutionQueue.push(new Result(b.value + top.value, b.end));
+            continue;
+          }
+
+        }
+      }
+
+    }
 
   }
 }
