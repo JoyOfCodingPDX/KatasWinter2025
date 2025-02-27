@@ -14,4 +14,12 @@ public class BankOCR {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public int parseNumber(String testNumber) {
+    System.err.println("Missing command line arguments");
+
+
+
+    return 0;
+  }
 }
