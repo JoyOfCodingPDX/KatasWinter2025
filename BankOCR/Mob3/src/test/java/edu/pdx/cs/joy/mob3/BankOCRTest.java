@@ -11,3 +11,22 @@ public class BankOCRTest
   }
 
 }
+
+/*
+  four arrays of string
+  line_1[27]
+  line_2[27]
+  line_3[27]
+  line_4[27]
+ */
+
+/*
+  one pattern
+  [0, 0, 1]
+  [0, 0, 1]
+  [0, 0, 1]
+  two pattern
+  [0, 1, 0]
+  [0, 1, 1]
+  [1, 1, 0]
+ */
