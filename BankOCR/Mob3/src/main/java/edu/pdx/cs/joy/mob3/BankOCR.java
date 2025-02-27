@@ -13,7 +13,17 @@ public class BankOCR {
   @VisibleForTesting
   public static void main(String[] args) {
 
-    System.err.println("Missing command line arguments");
+      boolean[][] patternOne = {{false,false,false},{false,false,true},{false,false,true}};
+      boolean[][] patternTwo = {{false,true,false},{false,true,true},{true,true,false}};
+      boolean[][] patternThree = {{false,true,false},{false,true,true},{false,true,true}};
+      boolean[][] patternFour = {{false,false,false},{true,true,true},{false,false,true}};
+      boolean[][] patternFive = {{false,true,false},{true,true,false},{false,true,true}};
+      boolean[][] patternSix = {{false,true,false},{true,true,false},{true,true,true}};
+      boolean[][] patternSeven = {{false,true,false},{false,false,true},{false,false,true}};
+      boolean[][] patternEight = {{false,true,false},{true,true,true},{true,true,true}};
+      boolean[][] patternNine = {{false,true,false},{true,true,true},{false,true,true}};
+
+      System.err.println("Missing command line arguments");
   }
 
   public String parseArgs(char[][] args) {
