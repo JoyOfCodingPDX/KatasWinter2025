@@ -30,3 +30,8 @@ public class BankOCRTest
   [0, 1, 1]
   [1, 1, 0]
  */
+
+/*
+ if first or thrid row == "_" error
+ if second == " | " errror
+ */
