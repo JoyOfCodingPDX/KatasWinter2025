@@ -50,7 +50,7 @@ public class BankOCRTest
         BankOCR bankOCR = new BankOCR();
         char[][] invalidInput = {
                 "    _  _     _  _  _  _  _   ".toCharArray(), // added extra space here
-                "  A _| _||_||_ |_   ||_||_|".toCharArray(),
+                "  | _| _||_||_ |_   ||_||_|".toCharArray(),
                 "  ||_  _|  | _||_|  ||_| _|".toCharArray()
         };
         Exception exception = assertThrows(RuntimeException.class, () -> bankOCR.parseArgs(invalidInput));
