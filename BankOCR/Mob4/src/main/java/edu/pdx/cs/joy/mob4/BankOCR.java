@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.mob4;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.lang.reflect.Array;
+
 /**
  * A class for getting started with a code kata
  *
@@ -18,7 +20,7 @@ public class BankOCR {
   public int parseNumber(String testNumber) {
     System.err.println("Missing command line arguments");
 
-
+    Array<String> lines = new; //TODO
 
     return 0;
   }
