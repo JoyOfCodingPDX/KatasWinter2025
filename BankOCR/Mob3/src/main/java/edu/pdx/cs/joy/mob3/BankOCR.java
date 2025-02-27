@@ -23,7 +23,7 @@ public class BankOCR {
       boolean[][] patternEight = {{false,true,false},{true,true,true},{true,true,true}};
       boolean[][] patternNine = {{false,true,false},{true,true,true},{false,true,true}};
 
-      System.err.println("Missing command line arguments");
+    System.err.println("Missing command line arguments");
   }
 
   public String parseArgs(char[][] args) {
@@ -79,4 +79,17 @@ public class BankOCR {
       }
     }
   }
+
+  public static String parse_boolean_to_string(boolean[][] parsedBools) {
+    String result = "";
+    for (int i = 0; i < parsedBools[0].length / 3; i++){
+      for (int j = 0; j < 3; j++){
+        
+      }
+    }
+
+    return result;
+  }
+
+  
 }
