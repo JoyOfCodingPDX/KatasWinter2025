@@ -9,19 +9,19 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class BankOCR {
+  boolean[][] patternOne = {{false,false,false},{false,false,true},{false,false,true}};
+  boolean[][] patternTwo = {{false,true,false},{false,true,true},{true,true,false}};
+  boolean[][] patternThree = {{false,true,false},{false,true,true},{false,true,true}};
+  boolean[][] patternFour = {{false,false,false},{true,true,true},{false,false,true}};
+  boolean[][] patternFive = {{false,true,false},{true,true,false},{false,true,true}};
+  boolean[][] patternSix = {{false,true,false},{true,true,false},{true,true,true}};
+  boolean[][] patternSeven = {{false,true,false},{false,false,true},{false,false,true}};
+  boolean[][] patternEight = {{false,true,false},{true,true,true},{true,true,true}};
+  boolean[][] patternNine = {{false,true,false},{true,true,true},{false,true,true}};
 
   @VisibleForTesting
   public static void main(String[] args) {
 
-      boolean[][] patternOne = {{false,false,false},{false,false,true},{false,false,true}};
-      boolean[][] patternTwo = {{false,true,false},{false,true,true},{true,true,false}};
-      boolean[][] patternThree = {{false,true,false},{false,true,true},{false,true,true}};
-      boolean[][] patternFour = {{false,false,false},{true,true,true},{false,false,true}};
-      boolean[][] patternFive = {{false,true,false},{true,true,false},{false,true,true}};
-      boolean[][] patternSix = {{false,true,false},{true,true,false},{true,true,true}};
-      boolean[][] patternSeven = {{false,true,false},{false,false,true},{false,false,true}};
-      boolean[][] patternEight = {{false,true,false},{true,true,true},{true,true,true}};
-      boolean[][] patternNine = {{false,true,false},{true,true,true},{false,true,true}};
 
     System.err.println("Missing command line arguments");
   }
@@ -80,15 +80,66 @@ public class BankOCR {
     }
   }
 
-  public static String parse_boolean_to_string(boolean[][] parsedBools) {
+  public String parse_boolean_to_string(boolean[][] parsedBools) {
     String result = "";
     for (int i = 0; i < parsedBools[0].length / 3; i++){
       for (int j = 0; j < 3; j++){
-        
+        if (this.compare(parsedBools, i, this.patternOne)){
+          result += "1";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternTwo)){
+          result += "2";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternThree)){
+          result += "3";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternFour)){
+          result += "4";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternFive)){
+          result += "5";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternSix)){
+          result += "6";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternSeven)){
+          result += "7";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternEight)){
+          result += "8";
+          break;
+        }
+        if (this.compare(parsedBools, i, this.patternNine)){
+          result += "9";
+          break;
+        }
+        result += "0";
+
       }
     }
 
     return result;
+  }
+
+  public static boolean compare(boolean[][] string, int cur, boolean[][] number){
+    boolean status = true;
+
+    for (int i = 0; i < 3; i++){
+      for (int j = 0; j < 3; j++){
+        if (string[i][j+ (cur * 3)] != number[i][j]){
+          return false;
+        }
+      }
+    }
+
+    return status;
   }
 
   
