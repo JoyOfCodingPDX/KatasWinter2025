@@ -1,9 +1,8 @@
 package edu.pdx.cs.joy.mob3;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BankOCRTest
 {
@@ -56,6 +55,17 @@ public class BankOCRTest
         };
         Exception exception = assertThrows(RuntimeException.class, () -> bankOCR.parseArgs(invalidInput));
         assertTrue(exception.getMessage().contains("The characters are not valid"));
+    }
+    @Test
+    void testBlankInput() {
+        BankOCR bankOCR = new BankOCR();
+        char[][] blankInput = {
+                "                           ".toCharArray(),
+                "                           ".toCharArray(),
+                "                           ".toCharArray()
+        };
+        String result = bankOCR.parseArgs(blankInput);
+        assertEquals("?????????", result, "Blank input should return '?' for each digit");
     }
 }
 
