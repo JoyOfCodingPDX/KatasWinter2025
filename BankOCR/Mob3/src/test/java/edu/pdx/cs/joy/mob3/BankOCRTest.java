@@ -46,6 +46,17 @@ public class BankOCRTest
       Exception exception = assertThrows(RuntimeException.class, () -> bankOCR.parseArgs(invalidInput));
       assertTrue(exception.getMessage().contains("The lines are not 27 chars longs"));
   }
+    @Test
+    void testInvalidText() {
+        BankOCR bankOCR = new BankOCR();
+        char[][] invalidInput = {
+                "    _  _     _  _  _  _  _   ".toCharArray(), // added extra space here
+                "  A _| _||_||_ |_   ||_||_|".toCharArray(),
+                "  ||_  _|  | _||_|  ||_| _|".toCharArray()
+        };
+        Exception exception = assertThrows(RuntimeException.class, () -> bankOCR.parseArgs(invalidInput));
+        assertTrue(exception.getMessage().contains("The characters are not valid"));
+    }
 }
 
 /*
