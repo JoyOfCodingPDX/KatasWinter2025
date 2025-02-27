@@ -47,7 +47,8 @@ public class BankOCR {
 
   public static String parseOCR(String num) {
 
-
+    System.out.println(num); // this is correct
+    // but is not matching correctly, just returns default value
     return bankOCRMap.getOrDefault(num, "?");
   }
 
@@ -57,8 +58,14 @@ public class BankOCR {
 
     for (int j = 0; j < 27; j+=3) {
 
-      output = output.concat(parseOCR(top.substring(j, j+3) +
-              mid.substring(j, j+3) + bot.substring(j, j+3)));
+      String test = parseOCR(top.substring(j, j+3).
+              concat(mid.substring(j, j+3)).concat(bot.substring(j, j+3)));
+       System.out.println(test);
+
+      output = output.concat(parseOCR(top.substring(j, j+3).
+              concat(mid.substring(j, j+3)).concat(bot.substring(j, j+3))));
+      System.out.println(output);
+
     }
     return output;
   }
