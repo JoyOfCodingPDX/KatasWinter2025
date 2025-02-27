@@ -2,7 +2,9 @@ package edu.pdx.cs.joy.mob4;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import java.lang.reflect.Array;
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * A class for getting started with a code kata
@@ -20,7 +22,9 @@ public class BankOCR {
   public int parseNumber(String testNumber) {
     System.err.println("Missing command line arguments");
 
-    Array<String> lines = new; //TODO
+    //turn into array stream
+    ArrayList<String> lines = new ArrayList<>(Arrays.asList(testNumber.split("\n"))); //TODO
+    lines.stream().map(((line) ->));
 
     return 0;
   }
