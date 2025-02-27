@@ -16,7 +16,7 @@ public class BankOCR {
     System.err.println("Missing command line arguments");
   }
 
-  public static String parseArgs(char[][] args) {
+  public String parseArgs(char[][] args) {
     if (args.length < 3){
       throw new Exception("The amount of lines is less than three");
     }
@@ -27,11 +27,38 @@ public class BankOCR {
       }
     }
 
+    boolean[][] parseLines = new boolean[3][27];
+
+    for (int i = 0; i < 3; i++){
+      parse_line(parseLines[i], args[i]);
+    }
+
     // 1 0 0...
     // 0 0 ... 1
     // 1 0 0 0 0 0 0 0 0
     // 0 0 0 0 0 0 0 0 1
 
     return "";
+  }
+
+  public static void parse_line(boolean[] parseLine, char[] line) {
+    for (int i = 0; i < line.length; i++){
+      if ((i + 1)% 2 == 0){
+        if (line[i] == '|'){
+
+        }
+      }
+      if ((i + 1) % 2 == 1){
+        if (line[i] == '_'){
+
+        }
+      }
+
+      if (line[i] == ' '){
+        parseLine[i] = false;
+      } else {
+        parseLine[i] = true;
+      }
+    }
   }
 }
