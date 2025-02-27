@@ -18,12 +18,20 @@ public class BankOCR {
 
   public String parseArgs(char[][] args) {
     if (args.length < 3){
-      throw new Exception("The amount of lines is less than three");
+        try {
+            throw new Exception("The amount of lines is less than three");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     for (int i = 0; i < 3; i++){
       if (args[i].length != 27){
-        throw new Exception("The lines are not 27 chars longs");
+          try {
+              throw new Exception("The lines are not 27 chars longs");
+          } catch (Exception e) {
+              throw new RuntimeException(e);
+          }
       }
     }
 
