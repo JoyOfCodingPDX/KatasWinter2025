@@ -20,7 +20,7 @@ public class BankOCR {
       boolean[][] patternFive = {{false,true,false},{true,true,false},{false,true,true}};
       boolean[][] patternSix = {{false,true,false},{true,true,false},{true,true,true}};
       boolean[][] patternSeven = {{false,true,false},{false,false,true},{false,false,true}};
-      boolean[][] patternEight = {{false,true,false},{true,true,true},{true,true,true}};
+      boolean[][] patternEight = {{false,true,false},{true,true,true},{true,true,false}};
       boolean[][] patternNine = {{false,true,false},{true,true,true},{false,true,true}};
 
     System.err.println("Missing command line arguments");
