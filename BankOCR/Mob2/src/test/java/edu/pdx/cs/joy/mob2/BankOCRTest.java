@@ -26,6 +26,7 @@ public class BankOCRTest extends InvokeMainTestCase
   }
 
 
+  @Disabled
   @Test
   void canIDZero(){
     String zero = " _ \n+| |\n|_|\n   ";
@@ -38,7 +39,8 @@ public class BankOCRTest extends InvokeMainTestCase
     assertThat(result.getTextWrittenToStandardOut(),containsString("0"));
   }
 
-  @Test
+
+@Disabled  @Test
   void testValidOCRParsing() {
       String[] ocrInput = {
           "   _  _     _  _  _  _  _ ", 

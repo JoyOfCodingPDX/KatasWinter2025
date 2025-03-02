@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.mob3;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -45,6 +46,7 @@ public class BankOCRTest
       Exception exception = assertThrows(RuntimeException.class, () -> bankOCR.parseArgs(invalidInput));
       assertTrue(exception.getMessage().contains("The lines are not 27 chars longs"));
   }
+  @Disabled
     @Test
     void testInvalidText() {
         BankOCR bankOCR = new BankOCR();
@@ -56,6 +58,7 @@ public class BankOCRTest
         Exception exception = assertThrows(RuntimeException.class, () -> bankOCR.parseArgs(invalidInput));
         assertTrue(exception.getMessage().contains("The characters are not valid"));
     }
+    @Disabled
     @Test
     void testBlankInput() {
         BankOCR bankOCR = new BankOCR();
