@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>edu.pdx.cs.joy.katas</groupId>
+    <artifactId>KatasWinter2025</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <groupId>edu.pdx.cs.joy.katas</groupId>
+  <artifactId>MinesweeperKatas</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>Minesweeper Katas</name>
+  <description>The Minesweeper Katas</description>
+  <modules>
+    <module>Mob1</module>
+    <module>Mob2</module>
+    <module>Mob3</module>
+    <module>Mob4</module>
+    <module>Mob5</module>
+    <module>Mob6</module>
+  </modules>
+</project>
