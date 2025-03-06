@@ -7,7 +7,7 @@ public class MinesweeperTest
 
   @Test
   void canInstantiateKataClass() {
-    new Minesweeper();
+    new Minesweeper3();
   }
 
 }
