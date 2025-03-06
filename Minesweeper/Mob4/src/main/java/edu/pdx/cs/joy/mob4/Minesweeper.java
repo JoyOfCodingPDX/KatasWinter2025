@@ -11,6 +11,7 @@ import com.google.common.annotations.VisibleForTesting;
 public class Minesweeper {
 
 public static char[][] solve(char[][] grid) {
+
   int rows = grid.length;
   int cols = grid[0].length;
   char[][] result = new char[rows][cols];
