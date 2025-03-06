@@ -14,4 +14,10 @@ public class Minesweeper {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static char[][] read(String[] strArray) {
+    String var = strArray[0];
+    String[] nums = var.split(" ");
+    
+  }
 }

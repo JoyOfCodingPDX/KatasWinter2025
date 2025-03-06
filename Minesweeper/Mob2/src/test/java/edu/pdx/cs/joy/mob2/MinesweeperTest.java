@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.mob2;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class MinesweeperTest
 {
 
@@ -19,10 +21,10 @@ public class MinesweeperTest
     String line4 = "....";
     String []strArray = new String[]{ matrixSize, line1, line2, line3, line4 };
 
-    char [][]expected = new char[][] { line1, line2, line3, line4 };
+    char [][]expected = new char[][] { {'*','.','.','.'}, {'.','.','.','.'}, {'.','*','.','.'}, {'.','.','.','.'} };
 
-    char [][]mineSweeperMatrix = minesweeper.read(strArray);
-    assertThat(minesweeper.read(strArray), expected);
+    char [][]mineSweeperMatrix = Minesweeper.read(strArray);
+    assertThat(Minesweeper.read(strArray), expected);
 
   }
 
