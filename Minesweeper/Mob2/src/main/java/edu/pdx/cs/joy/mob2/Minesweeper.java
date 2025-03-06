@@ -32,5 +32,27 @@ public class Minesweeper {
     return out;
   }
 
+  public static char[][] fillNumbers(char[][] input){
+    int row = input.length;
+    int col = input[0].length;
+    for(int r = 0; r < row; r++){
+      for(int c = 0; c < col; c++){
+        if(input[r][c] == '.'){
+          int mines = 0;
+          int x = r -1;
+          if(0 <= x && x >= row){
+            
+          }
+
+          input[r][c] = (char)mines;
+        }
+        
+
+      }
+    }
+
+    return input;
+  }
+
 
 }

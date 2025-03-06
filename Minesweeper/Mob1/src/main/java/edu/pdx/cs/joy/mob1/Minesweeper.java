@@ -31,8 +31,19 @@ public class Minesweeper {
     return grid[0].length;
   }
 
-  public void createGrid(int width, int height) {
-    this.grid = new String[width][height];
+  public void populateGrid(String gridInput) {
+    String[] rows = gridInput.split("\n");
+    for (int i = 0; i < rows.length; i++) {
+      if (rows[i].equals("*")) {
+        rows[i] = "\uD83D\uDCA3";
+      }
+    }
+
+    for (int i = 0; i < rows.length; i++) {
+      for (int j = 0; j < rows[i].length(); j++) {
+        grid[i][j] = rows[i].charAt(j) + "";
+      }
+    }
 
   }
 

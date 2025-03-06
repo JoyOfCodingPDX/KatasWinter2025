@@ -57,7 +57,7 @@ public class MinesweeperTest
   @Test
   void calculateBombProx() {
     Minesweeper minesweeper = new Minesweeper(4, 4);
-    String grid = "*...\n" + "....\n" + ".*..\n" + "....";
+    String gridInput = "*...\n" + "....\n" + ".*..\n" + "....";
     minesweeper.
   }
 
