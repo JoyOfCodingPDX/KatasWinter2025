@@ -26,19 +26,22 @@ public class Minesweeper {
     int xLimit = matrix.get(0).size();
     int yLimit = matrix.size();
 
-    ArrayList<ArrayList<Pair>> coordinateMatrix = new ArrayList<>();
+    ArrayList<ArrayList<Coordinate>> coordinateMatrix = new ArrayList<>();
     for(int i = 0; i < matrix.size(); i++) {
-      ArrayList<Pair> row = new ArrayList<Pair>();
+      ArrayList<Coordinate> row = new ArrayList<Coordinate>();
       for(int j = 0; j < matrix.get(i).size(); j++) {
-        row.add(new Pair(i, j));
+        row.add(new Coordinate(i, j));
       }
       coordinateMatrix.add(row);
     }
 
-    List<List<Integer>> result = coordinateMatrix.stream().map(row -> row.stream().map(e -> numOfCoordsNearby()));
+//    [0, 1, 2].map(n -> n + 1) = [1, 2, 3]
+
+    List<List<Integer>> result = coordinateMatrix.stream().map(row -> row.stream().map(e -> numOfCoordsNearby(e, xLimit, yLimit)).toList()).toList();
   }
 
-  int numOfCoordsNearby() {
+  public static int numOfCoordsNearby(Coordinate e, int xLimit, int yLimit) {
+    ArrayList<Integer> line1 = new ArrayList<>();
     return 0;
   }
 

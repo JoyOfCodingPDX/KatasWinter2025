@@ -1,10 +1,10 @@
 package edu.pdx.cs.joy.mob5;
 
-public class Pair {
+public class Coordinate {
   int x;
   int y;
 
-  Pair(int x, int y) {
+  Coordinate(int x, int y) {
     this.x = x;
     this.y = y;
   }
