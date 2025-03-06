@@ -10,4 +10,12 @@ public class MinesweeperTest
     new Minesweeper();
   }
 
+  @Test
+  void emptyMatrixTest() {
+    int row = 0;
+    int column = 0;
+    char [][] matrix = new char[row][column];
+
+
+  }
 }
