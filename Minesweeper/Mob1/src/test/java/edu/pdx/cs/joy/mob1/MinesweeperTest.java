@@ -55,7 +55,7 @@ public class MinesweeperTest
 
   }
   @Test
-  void createBombas() {
+  void calculateBombProx() {
     Minesweeper minesweeper = new Minesweeper(3, 3);
 
   }
