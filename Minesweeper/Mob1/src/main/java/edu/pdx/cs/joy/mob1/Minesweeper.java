@@ -33,15 +33,73 @@ public class Minesweeper {
 
   public void populateGrid(String gridInput) {
     String[] rows = gridInput.split("\n");
+    /* 
     for (int i = 0; i < rows.length; i++) {
       if (rows[i].equals("*")) {
         rows[i] = "\uD83D\uDCA3";
       }
     }
-
+    */
+    
     for (int i = 0; i < rows.length; i++) {
       for (int j = 0; j < rows[i].length(); j++) {
         grid[i][j] = rows[i].charAt(j) + "";
+      }
+    }
+
+    for (int i = 0; i < grid.length; i++) {
+      for (int j = 0; j < grid[i].length; j++) {
+        if (grid[i][j].equals(".")) {
+          grid[i][j] = "0";
+        }
+      }
+    }
+
+    for (int i = 0; i<grid.length;i++){
+      for (int j = 0; j<grid[i].length;j++){
+        
+        if (i<1){
+          if (j<1) { // top left corner
+            if (grid[i+1][j]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i][j+1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i+1][j+1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+          }
+          else if (j == grid.length - 1){ // top right corner
+            if (grid[i+1][j]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i][j-1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i+1][j-1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+          }
+          else { // top row
+            if (grid[i+1][j]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i][j-1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i+1][j-1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i+1][j+1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+            else if (grid[i][j+1]=="*"){
+              grid[i][j] = Integer.toString(Integer.parseInt(grid[i][j])+1);
+            }
+          }
+        }
+
       }
     }
 
