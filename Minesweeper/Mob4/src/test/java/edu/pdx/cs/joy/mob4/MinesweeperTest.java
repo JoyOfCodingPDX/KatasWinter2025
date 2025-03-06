@@ -105,4 +105,19 @@ public class MinesweeperTest
     }
   }
 
+  @Test
+  void testEmpty(){
+    char[][] inputGrid={
+            {}   };
+    char[][] outputGrid={
+            {}
+    };
+
+    int rows = inputGrid.length;
+    int cols = inputGrid[0].length;
+    Minesweeper minesweeper = new Minesweeper();
+    inputGrid = minesweeper.solve(rows, cols, inputGrid);
+    assertEquals(outputGrid.length, 0);
+  }
+
 }
