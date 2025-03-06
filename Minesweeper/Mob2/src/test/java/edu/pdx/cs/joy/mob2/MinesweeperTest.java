@@ -24,7 +24,7 @@ public class MinesweeperTest
     char [][]expected = new char[][] { {'*','.','.','.'}, {'.','.','.','.'}, {'.','*','.','.'}, {'.','.','.','.'} };
 
     char [][]mineSweeperMatrix = Minesweeper.read(strArray);
-    assertThat(Minesweeper.read(strArray), expected);
+    assert(Minesweeper.read(strArray),expected);
 
   }
 
