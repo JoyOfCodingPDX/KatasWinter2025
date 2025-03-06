@@ -10,13 +10,13 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Minesweeper {
 
-  private char[][] grid;
+  private String[][] grid;
   public Minesweeper(int height, int width) {
-    this.grid = new char[height][width];
+    this.grid = new String[height][width];
 
     for (int i = 0; i < height; i++) {
       for (int j = 0; j < width; j++) {
-        this.grid[i][j] = '.';
+        this.grid[i][j] = ".";
       }
     }
   }
@@ -29,6 +29,22 @@ public class Minesweeper {
   public int getHeight() {
     // second inner
     return grid[0].length;
+  }
+
+  public void populateGrid(String gridInput) {
+    String[] rows = gridInput.split("\n");
+    for (int i = 0; i < rows.length; i++) {
+      if (rows[i].equals("*")) {
+        rows[i] = "\uD83D\uDCA3";
+      }
+    }
+
+    for (int i = 0; i < rows.length; i++) {
+      for (int j = 0; j < rows[i].length(); j++) {
+        grid[i][j] = rows[i].charAt(j) + "";
+      }
+    }
+
   }
 
   public void displayGrid() {
