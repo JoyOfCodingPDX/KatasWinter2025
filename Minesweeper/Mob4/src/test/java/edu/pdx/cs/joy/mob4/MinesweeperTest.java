@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.mob4;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MinesweeperTest
 {
@@ -10,12 +11,5 @@ public class MinesweeperTest
     new Minesweeper();
   }
 
-  @Test
-  void emptyMatrixTest() {
-    int row = 0;
-    int column = 0;
-    char [][] matrix = new char[row][column];
 
-
-  }
 }

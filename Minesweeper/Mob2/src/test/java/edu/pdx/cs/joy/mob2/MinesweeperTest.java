@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.mob2;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MinesweeperTest
@@ -23,9 +25,16 @@ public class MinesweeperTest
 
     char [][]expected = new char[][] { {'*','.','.','.'}, {'.','.','.','.'}, {'.','*','.','.'}, {'.','.','.','.'} };
 
-    char [][]mineSweeperMatrix = Minesweeper.read(strArray);
-    assertThat(Minesweeper.read(strArray), expected);
+    System.out.println(Minesweeper.read(strArray)[0]);
 
+    assert(Arrays.deepEquals(Minesweeper.read(strArray), expected));
   }
 
+  @Test
+  void expectedArrayShouldReturnArrayWithNumbers() {
+    char[][] input = new char[][]{{'*', '.', '.', '.'}, {'.', '.', '.', '.'}, {'.', '*', '.', '.'}, {'.', '.', '.', '.'}};
+    char[][] expected = new char[][]{{'*', '1', '0', '0'}, {'2', '2', '1', '0'}, {'1', '*', '1', '0'}, {'1', '1', '1', '0'}};
+
+    assert(Arrays.deepEquals(Minesweeper.fillNumbers(input), expected));
+  }
 }
