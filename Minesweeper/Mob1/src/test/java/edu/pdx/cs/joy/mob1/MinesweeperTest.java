@@ -3,6 +3,7 @@ package edu.pdx.cs.joy.mob1;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class MinesweeperTest
 {
@@ -10,21 +11,7 @@ public class MinesweeperTest
   @Test
   void canInstantiateKataClass() {
 
-    new Minesweeper();
 
-
-    // inital test ideas:
-//    3 x 3
-    @Test
-    void createGridFromInputNums() {
-      Minesweeper minesweeper = new Minesweeper();
-      minesweeper.createGrid( 3,  3);
-
-      char[][] grid = minesweeper.getGrid();
-      assertThat(grid.getWidth(), 3);
-      assertThat(grid.getHeight(), 3);
-
-    }
 
     // 4 x 4
 
@@ -44,6 +31,32 @@ public class MinesweeperTest
     // 1 1 1
     // 1 * 1
     // 1 1 1
+    // Test input:
+    //4 4
+    //*...
+    //....
+    //.*..
+    //....
+    //3 5
+    //**...
+    //.....
+    //.*...
+    //0 0
+
+  }
+  // inital test ideas:
+//    3 x 3
+  @Test
+  void createGridFromInputNums() {
+    Minesweeper minesweeper = new Minesweeper(3, 3);
+
+    assertThat(minesweeper.getWidth(), equalTo(3));
+    assertThat(minesweeper.getHeight(), equalTo(3));
+
+  }
+  @Test
+  void createBombas() {
+    Minesweeper minesweeper = new Minesweeper(3, 3);
 
   }
 

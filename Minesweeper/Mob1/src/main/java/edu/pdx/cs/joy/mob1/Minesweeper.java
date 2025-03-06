@@ -11,11 +11,16 @@ import com.google.common.annotations.VisibleForTesting;
 public class Minesweeper {
 
   private char[][] grid;
+  public Minesweeper(int height, int width) {
+    this.grid = new char[height][width];
 
-
-  public char[][] getGrid() {
-    return grid;
+    for (int i = 0; i < height; i++) {
+      for (int j = 0; j < width; j++) {
+        this.grid[i][j] = '.';
+      }
+    }
   }
+
 
   public int getWidth() {
     return grid.length;
