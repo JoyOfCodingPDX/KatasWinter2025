@@ -28,8 +28,8 @@ public class RPNCalculator {
             // push i onto stack
             stack.push(Integer.parseInt(args[i]));
         } else {
-            int result = calculate(stack.pop(), stack.pop(), args[i]);
-            stack.push(result);
+                int result = calculate(stack.pop(), stack.pop(), args[i]);
+                stack.push(result);
         }
     }
     System.out.println("Answer = " + stack.pop());
