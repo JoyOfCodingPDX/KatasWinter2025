@@ -31,10 +31,6 @@ public class Minesweeper {
     return grid[0].length;
   }
 
-  public void createGrid(int width, int height) {
-    this.grid = new char[width][height];
-  }
-
   public void displayGrid() {
 
   }
@@ -45,6 +41,9 @@ public class Minesweeper {
     System.err.println("Missing command line arguments");
 
     // 2d Array:
+  }
+  public void calculateBombProx(String input) {
+
   }
 
 }

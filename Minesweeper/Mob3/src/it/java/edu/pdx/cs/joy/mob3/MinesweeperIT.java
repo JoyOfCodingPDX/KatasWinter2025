@@ -18,7 +18,7 @@ class MinesweeperIT extends InvokeMainTestCase {
             .*..
             ....
             """;
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class, len, height, board);
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper3.class, board, len, height);
 
     String expected = """
             *100

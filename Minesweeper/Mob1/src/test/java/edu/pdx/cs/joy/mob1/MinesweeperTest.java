@@ -55,9 +55,9 @@ public class MinesweeperTest
 
   }
   @Test
-  void createBombas() {
-    Minesweeper minesweeper = new Minesweeper(3, 3);
-
+  void calculateBombProx() {
+    Minesweeper minesweeper = new Minesweeper(4, 4);
+    String grid = "*...\n" + "....\n" + ".*..\n" + "....";
   }
 
 }
