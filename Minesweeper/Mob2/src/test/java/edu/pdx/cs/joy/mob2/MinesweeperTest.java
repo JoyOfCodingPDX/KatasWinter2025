@@ -35,6 +35,13 @@ public class MinesweeperTest
     char[][] input = new char[][]{{'*', '.', '.', '.'}, {'.', '.', '.', '.'}, {'.', '*', '.', '.'}, {'.', '.', '.', '.'}};
     char[][] expected = new char[][]{{'*', '1', '0', '0'}, {'2', '2', '1', '0'}, {'1', '*', '1', '0'}, {'1', '1', '1', '0'}};
 
+
+    System.out.println(Minesweeper.fillNumbers(input)[0]);
+    System.out.println(Minesweeper.fillNumbers(input)[1]);
+    System.out.println(Minesweeper.fillNumbers(input)[2]);
+    System.out.println(Minesweeper.fillNumbers(input)[3]);
+
     assert(Arrays.deepEquals(Minesweeper.fillNumbers(input), expected));
+
   }
 }

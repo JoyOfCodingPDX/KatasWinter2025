@@ -35,18 +35,27 @@ public class Minesweeper {
   public static char[][] fillNumbers(char[][] input){
     int row = input.length;
     int col = input[0].length;
+    int mines = 0;
     for(int r = 0; r < row; r++){
       for(int c = 0; c < col; c++){
         if(input[r][c] == '.'){
-          int mines = 0;
-          int x = r -1;
-          if(0 <= x && x >= row){
-            
-          }
 
-          input[r][c] = (char)mines;
+
+          if (r-1 >= 0 && c -1 >=0){ if (input[r-1][c-1] == '*'){mines++;}} // topleft
+          if (r-1 >= 0 ){ if (input[r-1][c] == '*'){mines++;}} // topmid
+          if (r-1 >= 0 && c +1 <col){ if (input[r-1][c+1] == '*'){mines++;}} // topright
+
+          if (c -1 >=0){ if (input[r][c-1] == '*'){mines++;}}
+          if (c +1 <col){ if (input[r][c+1] == '*'){mines++;}}
+
+          if (r+1 < row && c -1 >=0){ if (input[r+1][c-1] == '*'){mines++;}} // botleft
+          if (r+1 < row ){ if (input[r+1][c] == '*'){mines++;}} // botmid
+          if (r+1 < row && c +1 <col){ if (input[r+1][c+1] == '*'){mines++;}} // botright
+
+          input[r][c] = (char)('0' +mines);
+          mines = 0;
         }
-        
+
 
       }
     }
