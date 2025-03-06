@@ -1,5 +1,7 @@
 package edu.pdx.cs.joy.mob3;
 
+import javax.management.RuntimeErrorException;
+
 import com.google.common.annotations.VisibleForTesting;
 
 /**
@@ -60,17 +62,20 @@ public class BankOCR {
   }
 
   public static void parse_line(boolean[] parseLine, char[] line) {
+    try{
     for (int i = 0; i < line.length; i++){
+      if(line[i] != ' '){
       if ((i + 1)% 2 == 0){
-        if (line[i] == '|'){
-
+        if (line[i] != '_'){
+          throw new RuntimeException("The characters are not valid");
         }
       }
       if ((i + 1) % 2 == 1){
-        if (line[i] == '_'){
-
+        if (line[i] != '|'){
+          throw new RuntimeException("The characters are not valid");
         }
       }
+    }
 
       if (line[i] == ' '){
         parseLine[i] = false;
@@ -78,6 +83,10 @@ public class BankOCR {
         parseLine[i] = true;
       }
     }
+  }
+  catch(RuntimeErrorException e){
+    throw new RuntimeException(e);
+  }
   }
 
   public static String parse_boolean_to_string(boolean[][] parsedBools) {

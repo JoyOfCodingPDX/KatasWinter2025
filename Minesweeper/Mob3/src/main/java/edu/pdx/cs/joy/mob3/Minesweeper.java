@@ -34,6 +34,7 @@ public class Minesweeper {
     int height = data.length;
     int[][] board = new int[width][height];
 
+    //TODO: parse input into the board
     for (int x = 0; x < width_given; x++){
       for (int y = 0; y < height_given; y++){
         if (data[x].charAt(y) == '*'){
@@ -47,6 +48,7 @@ public class Minesweeper {
       }
     }
 
+    //addaround and stuff
     for (int x = 0; x < width_given; x++){
       for (int y = 0; y < height_given; y++){
         if (board[x][y] == -1){
@@ -80,3 +82,4 @@ public class Minesweeper {
 
     return data;
   }
+
