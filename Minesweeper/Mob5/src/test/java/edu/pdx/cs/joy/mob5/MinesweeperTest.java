@@ -2,6 +2,10 @@ package edu.pdx.cs.joy.mob5;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class MinesweeperTest
 {
 
@@ -45,7 +49,7 @@ public class MinesweeperTest
             List.of("1", "*", "1", "0", "0"),
             );
 
-    assertThat(Minesweeper.MineSweepSolve(mineField), mineFieldResult);
+    assertThat(Minesweeper.MineSweepSolve(mineField), mineField);
   }
   }
 }
