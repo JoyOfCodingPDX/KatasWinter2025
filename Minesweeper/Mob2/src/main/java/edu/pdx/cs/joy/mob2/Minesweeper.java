@@ -24,16 +24,13 @@ public class Minesweeper {
 
     char [][] out = new char[rows][cols];
 
-
-
     for (int row = 0; row < rows; row++){
       for(int col = 0; col < cols; col++){
         out[row][col] = strArray[row + 1].charAt(col);
       }
-
     }
     return out;
-
-
   }
+
+
 }
