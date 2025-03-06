@@ -26,9 +26,20 @@ class MinesweeperIT extends InvokeMainTestCase {
             1*10
             1110
             """;
-
-    assertThat(result.getTextWrittenToStandardOut(), equalTo(expected));
+    //assert()
+    assertThat(result.getTextWrittenToStandardOut().replaceAll("\r", ""), equalTo(expected.replaceAll("\\r", "")));
 
   }
+
+  @Test
+  void invokeMainWithOneArg(){
+    try {
+      InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper3.class, "a");
+      assert(false);
+    } catch (Exception e){
+      assert(true);
+    }
+  }
+
 
 }

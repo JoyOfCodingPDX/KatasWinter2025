@@ -14,10 +14,12 @@ public class Minesweeper3 {
   public static void main(String[] args) {
     if (args.length == 0) {
       System.err.println("Missing command line arguments");
+      throw new IllegalArgumentException("Missing command line arguments");
     }
 
     if (args.length < 3) {
       System.err.println("Not enough arguments");
+      throw new IllegalArgumentException("Not enough arguments");
     }
 
     String [] data = args[0].split("\n");

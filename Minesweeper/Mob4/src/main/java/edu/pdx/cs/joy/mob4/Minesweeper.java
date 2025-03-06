@@ -17,8 +17,18 @@ public class Minesweeper {
     return i>=0 && j>=0 && i<n && j<m;
   }
 
+  public char[][] parseMatrix(int row, int col, char[][] matrix){
+    for(int i=0;i<row;i++){
+      for(int j=0;j<col;j++){
+        if(matrix[i][j] == '.'){
+          matrix[i][j] = '0';
+        }
+      }
+    }
+    return matrix;
+  }
 public char[][] solve(int rows, int cols, char[][] grid) {
-
+  grid = parseMatrix(rows, cols, grid);
   char[][] result = new char[rows][cols];
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < cols; j++) {
@@ -81,14 +91,15 @@ public char[][] solve(int rows, int cols, char[][] grid) {
   public static void main(String[] args)
   {
     char[][] inputGrid={
-            {'*','0','0'},
-            {'*','0','0'}
+            {'*','.','.'},
+            {'*','.','.'}
 
     };
     
   int rows = inputGrid.length;
   int cols = inputGrid[0].length;
   Minesweeper minesweeper = new Minesweeper();
+  inputGrid = minesweeper.parseMatrix(rows, cols, inputGrid);
   inputGrid =minesweeper.solve(rows, cols, inputGrid);
   for(int i=0;i<inputGrid.length;i++){
     for(int j=0;j<inputGrid[0].length;j++){
