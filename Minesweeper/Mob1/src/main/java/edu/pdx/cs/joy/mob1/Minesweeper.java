@@ -31,12 +31,10 @@ public class Minesweeper {
     return grid[0].length;
   }
 
-
   public void createGrid(int width, int height) {
     this.grid = new String[width][height];
 
   }
-
 
   public void displayGrid() {
 
