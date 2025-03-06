@@ -16,8 +16,8 @@ public class MinesweeperTest
   @Test
   void testSolve() {
     char[][] inputGrid={
-            {'*','0','0'},
-            {'*','0','0'}
+            {'*','.','.'},
+            {'*','.','.'}
 
     };
 
@@ -43,8 +43,8 @@ public class MinesweeperTest
   @Test
   void testSingleMine(){
     char[][] inputGrid={
-            {'*','0'},
-            {'0','0'}
+            {'*','.'},
+            {'.','.'}
     };
     char[][] outputGrid={
             {'*','1'},
@@ -64,8 +64,8 @@ public class MinesweeperTest
   @Test
   void testNoMine(){
     char[][] inputGrid={
-            {'0','0','0'},
-            {'0','0','0'}
+            {'.','.','.'},
+            {'.','.','.'}
     };
     char[][] outputGrid={
             {'0','0','0'},
