@@ -12,6 +12,8 @@ public class Minesweeper {
 
   @VisibleForTesting
   public static void main(String[] args) {
+    System.out.println("For room one!");
     System.err.println("Missing command line arguments");
   }
+
 }
