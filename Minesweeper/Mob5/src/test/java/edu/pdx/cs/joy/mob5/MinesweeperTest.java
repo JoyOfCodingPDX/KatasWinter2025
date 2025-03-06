@@ -66,6 +66,22 @@ public class MinesweeperTest {
     List<List<String>> box = Minesweeper.getBox(Coordinate(1,1), 3, 3, matrix);
     // Expected result is a 3x3 box:
     assertThat(box.length == 3);
+    // Result:
+    //    List<List<String>> matrix = List.of(
+    //            List.of(".", ".", "."),
+    //            List.of(".", ".", "."),
+    //            List.of(".", ".", "."),
+    //            List.of(".", ".", "."),
+    //    );
+
+    // Call getBox method and create a 2x2 matrix:
+    List<List<String>> box = Minesweeper.getBox(Coordinate(0,0), 2, 2, matrix);
+    assertThat(box.length == 2);
+    //    List<List<String>> matrix = List.of(
+    //            List.of(".", "."),
+    //            List.of(".", "."),
+    //    );
+
   }
 }
 }
