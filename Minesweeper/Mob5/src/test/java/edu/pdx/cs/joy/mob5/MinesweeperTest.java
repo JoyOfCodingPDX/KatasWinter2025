@@ -28,8 +28,7 @@ public class MinesweeperTest {
             List.of("*", "1", "0", "0"),
             List.of("2", "2", "1", "0"),
             List.of("1", "*", "1", "0"),
-            List.of("1", "1", "1", "0"),
-            );
+            List.of("1", "1", "1", "0"));
 
     assertThat(Minesweeper.MineSweepSolve(mineField), mineFieldResult);
   }

@@ -23,7 +23,10 @@ public class Minesweeper3 {
     String [] data = args[0].split("\n");
     String [] result = parseBoard(data, Integer.parseInt(args[1]), Integer.parseInt(args[2]));
 
-    String finalResult = result;
+    String finalResult = String.join("\n", result);
+    finalResult = finalResult.replaceAll("\r", "");
+    finalResult = finalResult.replaceAll("\r", "");
+    System.out.println(finalResult.toString());
   }
 
     public static String[] parseBoard(String[] data, int width_given, int height_given){
@@ -38,11 +41,11 @@ public class Minesweeper3 {
       for (int x = 0; x < width_given; x++){
         for (int y = 0; y < height_given; y++){
           if (data[x].charAt(y) == '*'){
-            board[y][x] = -1;
+            board[x][y] = -1;
             //add_around(data, x, y);
           } else {
             if (data[x].charAt(y) == '.'){
-              board[y][x] = 0;
+              board[x][y] = 0;
             }
           }
         }
@@ -56,6 +59,16 @@ public class Minesweeper3 {
             if ((x-1) >= 0) {
               if (board[x-1][y] != -1) {
                 board[x-1][y] += 1;
+              }
+            }
+            if ((x-1) >= 0 && (y-1) >= 0){
+              if (board[x-1][y-1] != -1) {
+                board[x-1][y-1] += 1;
+              }
+            }
+            if ((x-1) >= 0 && (y+1) < height_given){
+              if (board[x-1][y+1] != -1) {
+                board[x-1][y+1] += 1;
               }
             }
             if ((x+1) < width_given){
@@ -73,14 +86,50 @@ public class Minesweeper3 {
                 board[x][y+1] += 1;
               }
             }
+
+            if ((x+1) < width_given && (y-1) >= 0){
+              if (board[x+1][y-1] != -1) {
+                board[x+1][y-1] += 1;
+              }
+            }
+            if ((x+1) < width_given && (y+1) < height_given){
+              if (board[x+1][y+1] != -1) {
+                board[x+1][y+1] += 1;
+              }
+            }
+
           }
         }
       }
 
+      for (int x = 0; x < width_given; x++){
+        for (int y = 0; y < height_given; y++){
+          //System.out.print(board[x][y] + " ");
+        }
+        //System.out.println();
+      }
       // row 1
       // col 1
+      String[][] Array = new String[width_given][height_given];
 
-      return data;
+      for (int x = 0; x < width_given; x++){
+        for (int y = 0; y < height_given; y++){
+          if (board[x][y] == -1){
+            Array[x][y] = "*";
+          } else {
+            Array[x][y] = String.valueOf(board[x][y]);
+          }
+        }
+      }
+      String[] Finalresult = new String[width_given];
+      for (int x = 0; x < width_given; x++){
+        Finalresult[x] = String.join("", Array[x]);
+      }
+
+
+
+
+      return Finalresult;
     }
 }
  /*
