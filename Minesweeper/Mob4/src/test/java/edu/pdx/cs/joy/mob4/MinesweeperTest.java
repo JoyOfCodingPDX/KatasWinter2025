@@ -40,4 +40,69 @@ public class MinesweeperTest
 
   }
 
+  @Test
+  void testSingleMine(){
+    char[][] inputGrid={
+            {'*','0'},
+            {'0','0'}
+    };
+    char[][] outputGrid={
+            {'*','1'},
+            {'1','1'}
+    };
+
+    int rows = inputGrid.length;
+    int cols = inputGrid[0].length;
+    Minesweeper minesweeper = new Minesweeper();
+    inputGrid =minesweeper.solve(rows, cols, inputGrid);
+    for(int i=0;i<inputGrid.length;i++){
+      for(int j=0;j<inputGrid[0].length;j++){
+        assertEquals(inputGrid[i][j], outputGrid[i][j]);
+      }
+    }
+  }
+  @Test
+  void testNoMine(){
+    char[][] inputGrid={
+            {'0','0','0'},
+            {'0','0','0'}
+    };
+    char[][] outputGrid={
+            {'0','0','0'},
+            {'0','0','0'}
+    };
+
+    int rows = inputGrid.length;
+    int cols = inputGrid[0].length;
+    Minesweeper minesweeper = new Minesweeper();
+    inputGrid =minesweeper.solve(rows, cols, inputGrid);
+    for(int i=0;i<inputGrid.length;i++){
+      for(int j=0;j<inputGrid[0].length;j++){
+        assertEquals(inputGrid[i][j], outputGrid[i][j]);
+      }
+    }
+  }
+
+  @Test
+  void testWithAllMine(){
+    char[][] inputGrid={
+            {'*','*','*'},
+            {'*','*','*'}
+    };
+    char[][] outputGrid={
+            {'*','*','*'},
+            {'*','*','*'}
+    };
+
+    int rows = inputGrid.length;
+    int cols = inputGrid[0].length;
+    Minesweeper minesweeper = new Minesweeper();
+    inputGrid =minesweeper.solve(rows, cols, inputGrid);
+    for(int i=0;i<inputGrid.length;i++){
+      for(int j=0;j<inputGrid[0].length;j++){
+        assertEquals(inputGrid[i][j], outputGrid[i][j]);
+      }
+    }
+  }
+
 }
